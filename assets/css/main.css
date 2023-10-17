@@ -1,6 +1,11 @@
 /* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Lobster&family=Martian+Mono:wght@300&family=Permanent+Marker&family=Skranji:wght@700&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Tilt+Neon&family=Yuji+Hentaigana+Akari&display=swap');
+
+
+
 
 /* Custom properties */
 :root{
@@ -123,7 +128,8 @@ body.light-theme{
 }
 
 .logo{
-    font-size: var(--font-size-md);
+    font-family: 'Pacifico', cursive;
+    font-size: var(--font-size-lg);
     color: var(--light-color);
 }
 
@@ -538,6 +544,53 @@ body.light-theme{
     transform: translateX(.5rem);
 }
 
+/* Bloglist posts */
+.bloglist-posts-grid-wrapper{
+    gap: var(--gap);
+}
+
+.bloglist-posts-article-image-wrapper,
+.bloglist-posts .article{
+    min-height: var(--item-min-height-sm);
+}
+
+.bloglist-posts .article{
+    background-color: var(--secondary-background-color);
+}
+
+.bloglist-posts-article-image-wrapper{
+    position: relative;
+}
+
+.bloglist-posts-grid-wrapper .article-data-container{
+    position: static;
+    background-color: transparent;
+}
+
+.bloglist-posts-grid-wrapper .article-title{
+    margin-bottom: var(--margin-sm);
+}
+
+.see-more-container{
+    padding-top: var(--margin-md);
+}
+
+.see-more-btn{
+    text-transform: uppercase;
+}
+
+.see-more-btn:hover{
+    color: var(--light-color);
+}
+
+.see-more-btn i{
+    transition: transform .25s;
+}
+
+.see-more-btn:hover i{
+    transform: translateX(.5rem);
+}
+
 /* Popular tags */
 .popular-tags-container{
     gap: var(--gap);
@@ -652,7 +705,7 @@ body.light-theme{
 }
 
 .blog-post-title{
-    font-size: clamp(3rem, 5vw, 6rem); 
+    font-size: clamp(3rem, 5vw, 4rem); 
 }
 
 .blog-post-data .article-data{
@@ -877,6 +930,13 @@ body.light-theme{
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .bloglist-posts-grid-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media screen and (min-width: 1500px) {
     .featured-article{
         grid-column: 3/-1;
