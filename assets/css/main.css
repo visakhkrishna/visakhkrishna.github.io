@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Galada&family=Lobster&family=Martian+Mono:wght@300&family=Permanent+Marker&family=Skranji:wght@700&family=Tilt+Prism&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Tilt+Neon&family=Yuji+Hentaigana+Akari&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme&family=Libre+Baskerville&family=Roboto+Slab&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Neuton&display=swap');
 
 
 
@@ -21,13 +22,15 @@
     --transparent-dark-color: rgba(0,0,0,.75);
     /*--font-family: 'Poppins', sans-serif;*/
     /*--font-family: 'BioRhyme', serif;*/
-    --font-family: 'Tilt Neon', sans-serif;
+    /*--font-family: 'Tilt Neon', sans-serif;*/
     /*--font-family: 'Libre Baskerville', serif;*/
     /*--font-family: 'Roboto Slab', serif;*/
     /*--font-family: 'Space Mono', monospace;*/
     /*--font-family: 'Poppins', sans-serif;*/
+    /*--font-family: 'EB Garamond', serif;*/
+    --font-family: 'Neuton', serif;
     --font-size-xsm: 1.2rem;
-    --font-size-sm: 2rem;
+    --font-size-sm: 2.2rem;
     --font-size-md: 2.4rem;
     --font-size-lg: 3rem;
     --font-size-xl: 4rem;
