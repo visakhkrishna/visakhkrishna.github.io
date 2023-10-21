@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewsFlash | Post</title>
+    <title>Visakh Krishna | Track-friendliness 4.0</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon.png">
     <!-- Remix icons -->
@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
     <!-- Custom styles -->
     <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="jquery.js"></script>
+    <script>
+      $(function(){
+        $("#includedContent").load("./text.html");
+      });
+    </script>
+
 </head>
 <body>
   <!-- Header -->
@@ -31,13 +38,13 @@
                       <a href="../consultancy_research/index.html" class="list-link">Consultancy & Research</a>
                   </li>
                   <li class="list-item">
-                    <a href="./index.html" class="list-link">Book reviews & Stories</a>
+                    <a href="../book_reviews/index.html" class="list-link">Book reviews & Stories</a>
                   </li>
                   <li class="list-item">
                     <a href="../about.html" class="list-link">About</a>
                   </li>
                   <li class="list-item">
-                    <a href="#" class="list-link">Contact</a>
+                    <a href="#contact-section" class="list-link">Contact</a>
                   </li>
               </ul>
           </div>
@@ -65,32 +72,60 @@
     <!-- Search -->
     <div class="search-form-container container" id="search-form-container">
         <div class="form-container">
-            <form action="" class="form">
-                <input class="form-input" type="text" placeholder="What are you looking for?">
+            <!--<form action="" class="form">
+                <input class="form-input" type="text" placeholder="What are you dlooking for?">
                 <button class="btn form-btn icon-box" type="submit">
                     <i class="ri-search-line"></i>
                 </button>
-            </form>
+            </form> -->
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" class="form-input">
+                <button>
+                  <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                </button>
+              </form>
+              <script>
+                const f = document.getElementById('form');
+                const q = document.getElementById('query');
+                const google = 'https://www.google.com/search?q=site%3A+';
+                const site = 'visakhkrishna.github.io';
+
+                function submitted(event) {
+                  event.preventDefault();
+                  const url = google + site + '+' + q.value;
+                  const win = window.open(url, '_blank');
+                  win.focus();
+                }
+
+                f.addEventListener('submit', submitted);
+              </script>
             <span class="form-note">Or press ESC to close.</span>
         </div>
         <div class="btn form-close-btn icon-box place-items-center" id="form-close-btn">
             <i class="ri-close-line"></i>
         </div>
     </div>
-<!-- BLOG EDIT STARTS HERE -->
+
+<!-- BLOG EDIT STARTS HERE&#3024;  -->
 
     <section class="blog-post section-header-offset">
         <div class="blog-post-container container">
             <div class="blog-post-data">
-                <h3 class="title blog-post-title">Track-friendliness 4.0 BR</h3>
+
+                <h3 class="title blog-post-title"> Track-friendliness 4.0 </h3>
+                <h4 class="title blog-post-subtitle"> This blogpost describes the idea behind award winning entry for</h4>
+
                 <div class="article-data">
                     <span>Dec 6th 2021</span>
                     <span class="article-data-spacer"></span>
                     <span>4 Min read</span>
                 </div>
-                <img src="../assets/images/TF4.jpg" alt="">
+
+                <img src="../assets/images/TF4.jpg" alt="" width="1000">
             </div>
+
             <div class="container">
+
                 <p> This blogpost describes the idea behind award winning entry for Transport Research Arena's TRAVisions2020 Young Researcher Competition</p>
 
                 <p>The rail transportation sector across the world is at a unique juncture. On one hand, it is being increasingly acknowledged as the most eco-friendly transportation mode for its active role in decreasing emissions. On the other hand, constant breakdowns of rail services due to aging infrastructure and unsynchronized maintenance planning has led to some questioning its efficiency.</p>
@@ -107,34 +142,23 @@
                     <p><span><i class="ri-double-quotes-l"></i></span> a system-wide model to describe how vehicles and track interact with each other and deteriorate over a long period  <span><i class="ri-double-quotes-r"></i></span></p>
                 </blockquote>
 
-                <iframe width="device-width" height="315" src="https://www.youtube.com/embed/LsTV05clETs?si=91YcTyjHu59uLl9y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- Videos -->
+                <iframe width="device-width" height="500" src="https://www.youtube.com/embed/LsTV05clETs?si=91YcTyjHu59uLl9y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-                <p>As an example for the application of Track-friendless 4.0, we checked the evolution of rail surface damage for two different vehicle designs over a long tonnage period also accounting for maintenance interventions in the form of rail grinding. The time-lapse video below demonstrates rail wear depth evolution and risk for the formation of cracks accumulated over tonnage.</p>
+                <!-- images -->
+                <figure class="style1">
+                  <img src="../assets/images/TF4.jpg" alt="Trulli" style="width:100%">
+                  <figcaption>Fig.1 - Trulli, Puglia, Italy</figcaption>
+                </figure>
 
+                <p>As an example for the applicatäion of Track-friendless 4.0, we checked the evolution of rail surface damage for two different vehicle designs over a long tonnage period also accounting for maintenance interventions in the form of rail grinding. The time-lapse video below demonstrates rail wear depth evolution and risk for the formation of cracks accumulated over tonnage.</p>
 
-                <div class="author d-grid">
-                    <div class="author-image-box">
-                        <img src="../assets/images/author.jpg" alt="" class="article-image">
-                    </div>
-                    <div class="author-about">
-                        <h3 class="author-name">John Doe</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quis repellat rerum, possimus cumque dolor repellendus eligendi atque explicabo exercitationem id.</p>
-                        <ul class="list social-media">
-                            <li class="list-item">
-                                <a href="#" class="list-link"><i class="ri-instagram-line"></i></a>
-                            </li>
-                            <li class="list-item">
-                                <a href="#" class="list-link"><i class="ri-facebook-circle-line"></i></a>
-                            </li>
-                            <li class="list-item">
-                                <a href="#" class="list-link"><i class="ri-twitter-line"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <hr class="style2">
+                <p style="text-align:center; font-size: 30px;"> &#69685; </p>
             </div>
         </div>
     </section>
+
     <!-- BLOG EDIT ENDS HERE -->
 
     <!-- Footer -->
@@ -142,28 +166,24 @@
 
           <div class="footer-container container d-grid">
 
-              <div class="company-data">
-                  <a href="../index.html">
-                      <h2 class="logo">Visakh Krishna</h2>
-                  </a>
+              <div class="company-data" id="contact-section">
+                  <h2> Contact: </h2>
                   <p class="company-description">Feel free to reach out to me via the handles listed below.</p>
-
                   <ul class="list social-media">
                       <li class="list-item">
-                          <a href="#" class="list-link"><i class="ri-instagram-line"></i></a>
+                          <a href="https://www.linkedin.com/in/visakhvkrishna" class="list-link"><i class="ri-linkedin-fill"></i></a>
                       </li>
                       <li class="list-item">
-                          <a href="#" class="list-link"><i class="ri-facebook-circle-line"></i></a>
+                          <a href="https://twitter.com/visakh_vkrishna" class="list-link"><i class="ri-twitter-line"></i></a>
                       </li>
                       <li class="list-item">
-                          <a href="#" class="list-link"><i class="ri-twitter-line"></i></a>
+                          <a href="https://medium.com/@visakhkrishna" class="list-link"><i class="ri-medium-line"></i></a>
                       </li>
                       <li class="list-item">
-                          <a href="#" class="list-link"><i class="ri-pinterest-line"></i></a>
+                        <a href=mailto:"vkrishna.visakh@gmail.com" class="list-link"><i class="ri-mail-line"></i></a>
                       </li>
                   </ul>
-
-                  <span class="copyright-notice">&copy;2023 Visakh V Krishna. All rights reserved.</span>
+                  <span class="copyright-notice">&copy;2023 Visakh Krishna. All rights reserved.</span>
               </div>
 
               <div>
@@ -173,20 +193,7 @@
               <div>
 
               </div>
-
-              <div>
-                  <h6 class="title footer-title">Contact</h6>
-
-                  <ul class="footer-list list">
-                      <li class="list-item">
-                          <a href="#" class="list-link">Contact us</a>
-                      </li>
-                  </ul>
-
-              </div>
-
           </div>
-
       </footer>
 
       <!-- Swiper.js -->

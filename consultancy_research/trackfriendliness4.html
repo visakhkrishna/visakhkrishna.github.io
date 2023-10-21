@@ -32,19 +32,19 @@
           <div class="menu" id="menu">
               <ul class="list">
                   <li class="list-item">
-                      <a href="../index.html" class="list-link">Home</a>
+                      <a href="../index.html" class="list-link">HOME</a>
                   </li>
                   <li class="list-item">
-                      <a href="./index.html" class="list-link">Consultancy & Research</a>
+                      <a href="../consultancy_research/index.html" class="list-link">CONSULTANCY & RESEARCH</a>
                   </li>
                   <li class="list-item">
-                    <a href="../book_reviews/index.html" class="list-link">Book reviews & Stories</a>
+                    <a href="../book_reviews/index.html" class="list-link">BOOK REVIEWS & STORIES</a>
                   </li>
                   <li class="list-item">
-                    <a href="../about.html" class="list-link">About</a>
+                    <a href="../about.html" class="list-link">ABOUT</a>
                   </li>
                   <li class="list-item">
-                    <a href="#contact-section" class="list-link">Contact</a>
+                    <a href="#contact-section" class="list-link">CONTACT</a>
                   </li>
               </ul>
           </div>
@@ -72,12 +72,33 @@
     <!-- Search -->
     <div class="search-form-container container" id="search-form-container">
         <div class="form-container">
-            <form action="" class="form">
-                <input class="form-input" type="text" placeholder="What are you looking for?">
+            <!--<form action="" class="form">
+                <input class="form-input" type="text" placeholder="What are you dlooking for?">
                 <button class="btn form-btn icon-box" type="submit">
                     <i class="ri-search-line"></i>
                 </button>
-            </form>
+            </form> -->
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" class="form-input">
+                <button>
+                  <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                </button>
+              </form>
+              <script>
+                const f = document.getElementById('form');
+                const q = document.getElementById('query');
+                const google = 'https://www.google.com/search?q=site%3A+';
+                const site = 'visakhkrishna.github.io';
+
+                function submitted(event) {
+                  event.preventDefault();
+                  const url = google + site + '+' + q.value;
+                  const win = window.open(url, '_blank');
+                  win.focus();
+                }
+
+                f.addEventListener('submit', submitted);
+              </script>
             <span class="form-note">Or press ESC to close.</span>
         </div>
         <div class="btn form-close-btn icon-box place-items-center" id="form-close-btn">
