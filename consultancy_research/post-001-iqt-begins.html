@@ -20,6 +20,24 @@
     <meta property="og:image:height" content="300" />
     <meta property="og:image:alt" content="An October journey to the white north" />
     <meta property="og:description" content="A COVID19-proof travelogue up to Swedish Lappland for the Northern Lights" />
+    <style>
+        table.style2 {
+          font-family: 'Poppins', sans-serif;
+          font-size: var(--font-size-llsm);
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            
+        }
+    </style>
 
 
 </head>
@@ -29,7 +47,7 @@
 
       <nav class="navbar container">
           <a href="../index.html">
-            <h2 class="logo">   <img src="../assets/images/logo_.svg" alt="" height="60"> </h2>
+            <h2 class="logo">   <img src="../assets/images/logo_.svg" alt="" height="50"> </h2>
           </a>
 
           <div class="menu" id="menu">
@@ -150,13 +168,34 @@
                 <h2>How does it work?</h2>
                 
                 <p>The workflow is simple and easy to use. It consists of three components as described in the figure</p>
-                <h4>Preparation</h4>
+
+                <table class="style1" style="width:100%">
+                    <tr>
+                      <th style="width:33%; text-align: center; font-size: var(--font-size-md)">Preparation</th>
+                      <th style="width:33%; text-align: center; font-size: var(--font-size-md)">Web application</th>
+                      <th style="width:33%; text-align: center; font-size: var(--font-size-md)">Mobile application</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><img src="./assets/post-001-fig-3a.svg" alt="IQT workflow" style="width:50%"></td>
+                        <td style="text-align: center"><img src="./assets/post-001-fig-3b.svg" alt="IQT workflow" style="width:50%"></td>
+                        <td style="text-align: center"><img src="./assets/post-001-fig-3c.svg" alt="IQT workflow" style="width: 50%"></td>
+                    </tr>
+                    <tr>
+                        <td>Rolling stock experts with domain knowledge prepare the layout of the asset or load it from an existing template as a simple list in excel or text file</td>
+                        <td>The web application processes the list and allocates components to specific areas of the asset and generates a work order with criteria to be fulfilled during inspection</td>
+                        <td>The workorder appears on an easy-to-use, intuitive interface on a mobile device for the inspectors on-site to enter comments, take photos, videos, and issue actions to be taken. This is simultaneously saved on an internet database linked to the web application.</td>
+                    </tr>
+                    
+                </table> 
+
+                <!--- <h4>Preparation</h4>
+
                 > Rolling stock experts with domain knowledge prepare the layout of the asset or load it from an existing template as a simple list in excel or text file
                 <h4>Web application</h4>
                 > The web application processes the list and allocates components to specific areas of the asset and generates a work order with criteria to be fulfilled during inspection
                 <h4>Mobile application</h4>
                 > The workorder appears on an easy-to-use, intuitive interface on a mobile device for the inspectors on-site to enter comments, take photos, videos, and issue actions to be taken. This is simultaneously saved on an internet database linked to the web application.
-                <p>The results of the inspection can then be viewed on the web application with options to edit and report it to the asset owner. A parallel workflow also relays the well-annotated results for detailed analytics through APIs.</p>
+                <p>The results of the inspection can then be viewed on the web application with options to edit and report it to the asset owner. A parallel workflow also relays the well-annotated results for detailed analytics through APIs.</p> -->
 
                                 
                 <h2>Why are we making it and who is it for?</h2>
@@ -180,8 +219,27 @@
                 <p>Such a tool can be useful for anyone in the industry who own, operate or maintain railway assets such as fleet-owners, rolling stock manufacturers, maintainers, infrastructure owners, railway consultancies, etc.</p>
 
                 <h2>Our design principles:</h2>
+
+                <table class="style1" style="width:100%">
+                    <tr>
+                      <th style="width:33%">SIMPLE</th>
+                      <th style="width:33%">FLEXIBLE</th>
+                      <th style="width:33%">FOCUSSED</th>
+                    </tr>
+                    <tr>
+                        <td>The application is simple to use and intuitive. The setting up of the inspection worklist can be done with  a simple text file with the component list</td>
+                        <td>The application works well for assets with varying complexities.</td>
+                        <td>Specially designed for rolling stock inspection activities in terms of number of components and reporting structure.</td>
+                    </tr>
+
+                    <tr>
+                      <td>The web application is easily accessible from any electronic device and a basic inspection can be easily created with the available templates</td>
+                      <td>Easy to record, edit, delete, modify remarks for the user – making it easy to work collaboratively by different users and over a long time on an asset</td>
+                      <td>Focus on simple, efficient and annotated data collection which is important for data-driven diagnostics.</td>
+                    </tr>
+                </table> 
                 
-                <h3>Simple</h3>
+                <!-- <h3>Simple</h3>
                 <ul class="disc">
                     <li>The application is simple to use and intuitive. The setting up of the inspection worklist can be done with  a simple text file with the component list</li>
                     <li>The web application is easily accessible from any electronic device and a basic inspection can be easily created with the available templates</li>
@@ -196,15 +254,19 @@
                     <li>Specially designed for rolling stock inspection activities in terms of number of components and reporting structure. </li>
                     <li>Focus on simple, efficient and annotated data collection which is important for data-driven diagnostics. </li>
                  </ul>
+                -->
 
-                <h2><mark>What do we offer?</mark></h2>
+                <h2>What do we offer?</mark></h2>
                 <ul class="disc">
-                    <li>Proprietary application tailor-made for rolling stock by our in-house experts</li>
-                    <li>A iOS application designed for iPad mini along with the device</li>
-                    <li>A web-based application for creating and reporting inspection reports</li>
-                    <li>APIs to link our inspection data with analytics services</li>
-                    <li>Support for application updates and general maintenance  </li>
+                    <li>Proprietary application <mark>tailor-made for rolling stock</mark> by our in-house experts</li>
+                    <li>A <mark>iOS application</mark> designed for iPad mini along with the device</li>
+                    <li>A <mark>web-based application</mark> for creating and reporting inspection reports</li>
+                    <li>APIs to link our inspection data with <mark>analytics services</mark></li>
+                    <li><mark>Support</mark> for application updates and general maintenance  </li>
                  </ul>
+                
+
+                 
 
                  <h4>If you have any questions/comments or interested in the application in general, please contact me, or my colleague. </h4>
 
