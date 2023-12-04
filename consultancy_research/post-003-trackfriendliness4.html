@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visakh Krishna | Track-friendliness 4.0</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.jpg">
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Swiper.js styles -->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="jquery.js"></script>
+    <script>
+      $(function(){
+        $("#includedContent").load("./text.html");
+      });
+    </script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+
+    <nav class="navbar container">
+        <a href="/index.html">
+          <h2 class="logo">   <img src="/assets/images/logo_.svg" alt="" height="50"> </h2>
+        </a>
+
+        <div class="menu" id="menu">
+            <ul class="list">
+                <li class="list-item">
+                    <a href="/index.html" class="list-link">HOME</a>
+                </li>
+                <li class="list-item">
+                    <a href="/consultancy_research/index.html" class="list-link">CONSULTANCY & RESEARCH</a>
+                </li>
+                <li class="list-item">
+                  <a href="/book_reviews/index.html" class="list-link">BLOG</a>
+                </li>
+                <li class="list-item">
+                  <a href="/about.html" class="list-link">ABOUT</a>
+                </li>
+                <li class="list-item">
+                  <a href="#contact-section" class="list-link">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list list-right">
+            <button class="btn place-items-center" id="theme-toggle-btn">
+                <i class="ri-sun-line sun-icon"></i>
+                <i class="ri-moon-line moon-icon"></i>
+            </button>
+
+            <button class="btn place-items-center" id="search-icon">
+                <i class="ri-search-line"></i>
+            </button>
+
+            <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                <i class="ri-menu-3-line open-menu-icon"></i>
+                <i class="ri-close-line close-menu-icon"></i>
+            </button>
+        </div>
+
+    </nav>
+
+  </header>
+
+    <!-- Search -->
+    <div class="search-form-container container" id="search-form-container">
+        <div class="form-container">
+            <!--<form action="" class="form">
+                <input class="form-input" type="text" placeholder="What are you dlooking for?">
+                <button class="btn form-btn icon-box" type="submit">
+                    <i class="ri-search-line"></i>
+                </button>
+            </form> -->
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" class="form-input">
+                <button>
+                  <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                </button>
+              </form>
+              <script>
+                const f = document.getElementById('form');
+                const q = document.getElementById('query');
+                const google = 'https://www.google.com/search?q=site%3A+';
+                const site = 'visakhkrishna.github.io';
+
+                function submitted(event) {
+                  event.preventDefault();
+                  const url = google + site + '+' + q.value;
+                  const win = window.open(url, '_blank');
+                  win.focus();
+                }
+
+                f.addEventListener('submit', submitted);
+              </script>
+            <span class="form-note">Or press ESC to close.</span>
+        </div>
+        <div class="btn form-close-btn icon-box place-items-center" id="form-close-btn">
+            <i class="ri-close-line"></i>
+        </div>
+    </div>
+
+<!-- BLOG EDIT STARTS HERE&#3024;  -->
+
+    <section class="blog-post section-header-offset">
+        <div class="blog-post-container container">
+            <div class="blog-post-data">
+
+                <h3 class="title blog-post-title"> Track-friendliness 4.0 </h3>
+                <h4 class="title blog-post-subtitle">  Award winning entry for Transport Research Arena's TRAVisions2020 Young Researcher Competition</h4>
+
+                <div class="article-data">
+                    <span>Sep 26th 2020</span>
+                    <span class="article-data-spacer"></span>
+                    <span>2 Min read</span>
+                </div>
+
+                <img src="./assets/post-003-fig-1.jpg" alt="" width="1000">
+            </div>
+
+            <div class="container">
+                <p>Originally published in a <a href="https://www.linkedin.com/pulse/track-friendliness-40-visakh-v-krishna%3FtrackingId=3XTccNT03GrdT3CXEwAx7A%253D%253D/?trackingId=3XTccNT03GrdT3CXEwAx7A%3D%3D" style="text-decoration:underline"> Linkedin blogpost</a> 
+                <p>The rail transportation sector across the world is at a unique juncture. On one hand, it is being increasingly acknowledged as the most eco-friendly transportation mode for its active role in decreasing emissions. On the other hand, constant breakdowns of rail services due to aging infrastructure and unsynchronized maintenance planning has led to some questioning its efficiency.</p>
+
+                <p>However, in the age of industrial revolution 4.0 there is an opportunity to move over to predictive maintenance strategies by considering both the vehicle and the track as a single system. Especially considering that the traffic patterns on a railway line for a given period is more homogeneous as compared to a roadway. This factor coupled along with powerful computing interfaces, there lies an opportunity to 'game' the vehicle-track interaction to predict maintenance intervals and grade existing vehicle classes to further encourage innovation in the way we design vehicles.</p>
+
+                <blockquote class="quote">
+                    <p><span><i class="ri-double-quotes-l"></i></span> in the age of industrial revolution 4.0 there is an opportunity to move over to predictive maintenance strategies by considering both vehicle and track as a single system.  <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>
+
+                <p>With increasing role of advanced simulation tools across all engineering domains, industrial standards in railways today even have provisions to use simulations to certify vehicles w.r.t their safety and comfort requirements. In this context, Digital-twin based methods are increasingly gaining prominence in applications such as condition monitoring, derailment prevention, maintenance scheduling, etc. Leveraging these developments, along with researchers at KTH I have been working in Shift2Rail projects to construct a system-wide model to describe how vehicles and track interact with each other and deteriorate over a long period. The approach has been multi-disciplinary encompassing various domains such as vehicle dynamics, contact mechanics, track maintenance strategies, econometrics, etc. Constructing a digital twin of the vehicle-track system can help plan maintenance, enhance safety and further improve the underlying sub-systems.</p>
+
+                <blockquote class="quote">
+                    <p><span><i class="ri-double-quotes-l"></i></span> a system-wide model to describe how vehicles and track interact with each other and deteriorate over a long period  <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>
+
+                <!-- images -->
+                <figure class="style1">
+                    <img src="./assets/post-003-fig-2.png" alt="Trulli" style="width:70%">
+                    <figcaption>Multi-body simulation representation of freight wagon</figcaption>
+                  </figure>
+                          
+                <p>As an example for the application of Track-friendless 4.0, we checked the evolution of rail surface damage for two different vehicle designs over a long tonnage period also accounting for maintenance interventions in the form of rail grinding. The time-lapse video below demonstrates rail wear depth evolution and risk for the formation of cracks accumulated over tonnage.</p>
+
+                <!-- Videos -->
+                <h4>Rail profile deterioration compared for two different bogie models</h4>
+                <iframe width="device-width" height="500" src="https://www.youtube.com/embed/LsTV05clETs?si=91YcTyjHu59uLl9y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                  
+
+                <hr class="style2">
+                <p style="text-align:center; font-size: 30px;"> &#69686; </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG EDIT ENDS HERE -->
+
+    <!-- Footer -->
+      <footer class="footer section">
+
+          <div class="footer-container container d-grid">
+
+              <div class="company-data" id="contact-section">
+                  <h2> Contact: </h2>
+                  <p class="company-description">Feel free to reach out to me via the handles listed below.</p>
+                  <ul class="list social-media">
+                      <li class="list-item">
+                          <a href="https://www.linkedin.com/in/visakhvkrishna" class="list-link"><i class="ri-linkedin-fill"></i></a>
+                      </li>
+                      <li class="list-item">
+                          <a href="https://twitter.com/visakh_vkrishna" class="list-link"><i class="ri-twitter-line"></i></a>
+                      </li>
+                      <li class="list-item">
+                          <a href="https://medium.com/@visakhkrishna" class="list-link"><i class="ri-medium-line"></i></a>
+                      </li>
+                      <li class="list-item">
+                        <a href=mailto:"vkrishna.visakh@gmail.com" class="list-link"><i class="ri-mail-line"></i></a>
+                      </li>
+                  </ul>
+                  <span class="copyright-notice">&copy;2023 Visakh Krishna. All rights reserved.</span>
+              </div>
+
+              <div>
+
+              </div>
+
+              <div>
+
+              </div>
+          </div>
+      </footer>
+
+      <!-- Swiper.js -->
+      <script src="../assets/js/swiper-bundle.min.js"></script>
+      <!-- Custom script -->
+      <script src="../assets/js/main.js"></script>
+  </body>
+  </html>
