@@ -420,7 +420,8 @@ body.light-theme{
     gap: var(--gap);
     font-size: var(--font-size-lsm);
     margin-bottom: 1rem;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Roboto Slab', serif;
     color: var(--light-color);
 }
 
@@ -733,7 +734,8 @@ body.light-theme{
 
 .blog-post-title{
     font-size: clamp(3rem, 5vw, 5rem);
-    font-family: 'Roboto', sans-serif;
+   /* font-family: 'Roboto', sans-serif;*/
+    font-family: 'Roboto Slab', serif;
     font-style: bold;
 }
 
