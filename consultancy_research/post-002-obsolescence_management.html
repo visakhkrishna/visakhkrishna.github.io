@@ -1,5 +1,41 @@
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visakh Krishna | The IQT project</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.jpg">
+  <!-- Remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Swiper.js styles -->
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <meta property="og:title" content="Digitalisation of Rolling Stock Inspection" />
+  <meta property="og:type" content="Blog post" />
+  <meta property="og:url" content="https://visakhkrishna.github.io/consultancy_research/post-001-iqt-begins.html" />
+  <meta property="og:image" content="https://visakhkrishna.github.io/consultancy_research/assets/post-001-fig-1.jpeg" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="An October journey to the white north" />
+  <meta property="og:description" content="An easy-to-use digital tool for inspection services in the railway industry
+  " />
+  <style>
+      table.style1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: var(--font-size-llsm);
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        vertical-align: top;
+      }
+  </style>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
     google.charts.load('current', {'packages':['corechart']});
@@ -8,37 +44,34 @@
   function drawSeriesChart() {
 
     var data = google.visualization.arrayToDataTable([
-      ['Asset',	'Cost at installation (10^ dollars)',	'Operational life in years'],
-      ['Hydroelectric dams',	9.7,	110],
-      ['Steel bridges', 7.7,	110],
-      ['Nuclear reactor', 10.0,	50],
-      ['Railway wagon', 5.3,	40],
-      ['Electric locomotive', 6.7,	35],
-      ['Metro train', 7.0,	35],
-      ['Highspeed train', 7.7,	35],
-      ['Fighter jets', 8.0,	30],
-      ['Heavy trucks', 6.0,	30],
-      ['Diesel locomotive', 6.5,	30],
-      ['Container ships', 8.3,	28],
-      ['Commercial aircraft', 8.7,	25],
-      ['Trucks', 5.3,	23],
-      ['Passenger bus', 5.7,	15],
-      ['ICE car', 4.8,	12],
-      ['Air craft engine', 7.0,	9],
-      ['TV', 3.7,	8],
-      ['Laptop', 3.5,	4],
-      ['Website', 4.0,	4],
-      ['Mobile phone', 3.0,	3]
+      ['Asset','Installation cost',	'Operational life in years','Class','Unit'],
+      ['Hydropower-dams (>700 MW)', 5e9,100, 'Energy',1],
+      ['Nuclear reactor',1e10,50,'Energy',1],
+      ['Goods wagon',2e5,40,'Rolling stock',1],
+      ['Electric loco.',5e6,35,'Rolling stock',1],
+      ['Metro trainset',1e7,40, 'Rolling stock',1],
+      ['Highspeed trainset',5e7,35, 'Rolling stock',1],
+      ['Fighter jets',1e8,30, 'Aeronautical',1],
+      ['Diesel loco.',3e6,25, 'Rolling stock',1],
+      ['Commercial aircraft',2e8,25, 'Aeronautical',1],
+      ['Trucks',2e5,20,	'Road transport',1],
+      ['Passenger bus',3e5,15, 'Road transport',1],
+      ['ICE car',3e4,12, 'Road transport',1],
+      ['TV',3e3,8, 'Consumer electronics',1],
+      ['Laptop',2e3,4, 'Consumer electronics',1],
+      ['Mobile phone',8e2,3, 'Consumer electronics',1],
+      ['Container ships',1e8,28, 'Water transport',1]
     ]);
 
     var options = {
-      title: 'Estimated operational life vs Cost at purchase/installation of Assets',
-      hAxis: {title: 'Price in log10($) at purchase/installation',  minValue:1},
+      hAxis: {title: 'Installation cost in $',  minValue:1, logScale: true},
+      legend:{},
       vAxis: {title: 'Average operational life in years'},
-      chartArea:{left:50,top:50,width:'85%',height:'80%'},
+      chartArea:{left:50,top:50,width:'70%',height:'80%',backgroundColor:'#F2F2F2'},
+      backgroundColor:{fill:'#F2F2F2', stroke: '#00000',strokeWidth: 3},
       height: '100%',
-      width: '100%',
-      bubble: {textStyle: {fontSize: 12}},
+      width: '80%',
+      bubble: {textStyle: {fontSize: 9}, opacity: .5},
       fontName:'Roboto Slab'
     };
 
@@ -46,42 +79,7 @@
     chart.draw(data, options);
   }
   </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visakh Krishna | The IQT project</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.jpg">
-    <!-- Remix icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- Swiper.js styles -->
-    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <meta property="og:title" content="Digitalisation of Rolling Stock Inspection" />
-    <meta property="og:type" content="Blog post" />
-    <meta property="og:url" content="https://visakhkrishna.github.io/consultancy_research/post-001-iqt-begins.html" />
-    <meta property="og:image" content="https://visakhkrishna.github.io/consultancy_research/assets/post-001-fig-1.jpeg" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="300" />
-    <meta property="og:image:alt" content="An October journey to the white north" />
-    <meta property="og:description" content="An easy-to-use digital tool for inspection services in the railway industry
-    " />
-    <style>
-        table.style1 {
-          font-family: 'Poppins', sans-serif;
-          font-size: var(--font-size-llsm);
-          border-collapse: collapse;
-          width: 100%;
-        }
 
-        td, th {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-          vertical-align: top;
-        }
-    </style>
 </head>
 <body>
   <!-- Header -->
@@ -175,11 +173,11 @@
         <div class="blog-post-container container">
             <div class="blog-post-data">
 
-                <h3 class="title blog-post-title">Obsolescence management in railway industry </h3>
-                <h4 class="title blog-post-subtitle">How to handle ageing components in rolling stock assets and when is it the right time to decommission?</h4>
+                <h3 class="title blog-post-title">Obsolescence management in railway sector  </h3>
+                <h4 class="title blog-post-subtitle">What is obsolescence and why does it matter?</h4>
 
                 <div class="article-data">
-                    <span>Nov 30th 2023</span>
+                    <span>Jan 6th 2023</span>
                     <span class="article-data-spacer"></span>
                     <span>4 Min read</span>
                 </div>
@@ -192,24 +190,14 @@
 
                 <p>In this blogpost, I describe the obsolescence problem faced by railway businesses in Sweden.</p>
 
-                There are a lot of terms thrown around when we talk about 'life' of our assets. What do they mean? How rigid are they? And exactly what to make of it as an asset planner?
-
-
-
-                <!-- images -->
-                <figure class="style1">
-                  <img src="./assets/post-001-fig-1.svg" alt="IQT app" style="width:30%">
-                  <figcaption></figcaption>
+                <h2>What is Obsolescence management?</h2>
+                <p>Obsolescence management</p>
+                <figure>
+                  <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+                  <figcaption> Figure: Estimated operational life vs Cost at purchase/installation of Assets </figcaption>
                 </figure>
 
-                <h2>What is Obsolescence management?</h2>
-                <p>IQT is our mobile & web-based digital application that can be used to record inspections and send a report to the asset owner for their business requirements. This is a part of our ongoing drive towards digitalisation of asset maintenance activities in the railway sector in Sweden. It has been developed after extensive survey of various stakeholders in the Swedish rail industry such as inspectors, asset-owners and maintainers.</p>
-                <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
-
-
-                <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
-
-                <h2> Where do you manage obsolescence?</h2>
+                <h2> Why do you need to manage obsolescence?</h2>
                 <p> Obsolescence management as a practice has been fairly prevalent in some niche sectors where the processes of handling obsolescence has become mature. The first application that comes to mind are military applications where it has become a necessity. </p>
 
                 <blockquote class="quote">
@@ -220,7 +208,7 @@
                     <img src="./assets/post-001-fig-2.png" alt="IQT workflow" style="width:100%">
                     <figcaption>IQT workflow</figcaption>
                 </figure>
-                <h2>How does it work?</h2>
+                <h2>The problem of obsolescence in railway industry</h2>
 
                 <p>The workflow is simple and easy to use. It consists of three components as described in the figure</p>
 
@@ -242,100 +230,6 @@
                     </tr>
 
                 </table>
-
-                <!--- <h4>Preparation</h4>
-
-                > Rolling stock experts with domain knowledge prepare the layout of the asset or load it from an existing template as a simple list in excel or text file
-                <h4>Web application</h4>
-                > The web application processes the list and allocates components to specific areas of the asset and generates a work order with criteria to be fulfilled during inspection
-                <h4>Mobile application</h4>
-                > The workorder appears on an easy-to-use, intuitive interface on a mobile device for the inspectors on-site to enter comments, take photos, videos, and issue actions to be taken. This is simultaneously saved on an internet database linked to the web application.
-                <p>The results of the inspection can then be viewed on the web application with options to edit and report it to the asset owner. A parallel workflow also relays the well-annotated results for detailed analytics through APIs.</p> -->
-
-
-                <h2>Why are we making it and who is it for?</h2>
-                <h3>Plan Do Check Act.. *Better*</h3>
-                <p>For industries with large and safety-critical assets such as the railway industry, quality management services are a vital part of the life-cycle activities.  We follow the <a href="https://www.iso.org/standard/55088.html" style="text-decoration:underline">ISO55000</a>-recommended PDCA cycle for continuous improvement in our asset management activities to realize maximum value from our assets. </p>
-
-                <blockquote class="quote">
-                    <p><span><i class="ri-double-quotes-l"></i></span> For a complex asset as a railway vehicle with 100s of components to check, going around with a notepad isn't going to cut it exactly. <span><i class="ri-double-quotes-r"></i></span></p>
-                </blockquote>
-
-                <p>For a complex asset as a railway vehicle with 100s of components to check, going around with a notepad isn't going to cut it exactly. There is a need for an inspection tool that is mindful about the asset complexity, make it easier to register inspections, and also report it to the asset owner in a simple manner. With this vision in mind, the original application was developed for the PC by our team of ISO9000-certified rolling stock specialists and has been in use for more than a decade in Sweden. With the latest iteration we are just making it better and <em>data-ready</em>.</p>
-
-                <h3>Your inspection data is more important than you think</h3>
-                What do we mean by data-ready? It simply means the preparedness and quality of data that can aid clear decision-making. It includes amongst other things such as data accuracy, completeness, timeliness, consistency, and accessibility. A well-labelled data collection system for an asset is crucial if you want the inspection to mean something beyond its completion.
-
-                <blockquote class="quote">
-                    <p><span><i class="ri-double-quotes-l"></i></span> A well-labelled data collection system for an asset is crucial if you want the inspection to mean something beyond its completion.<span><i class="ri-double-quotes-r"></i></span></p>
-                </blockquote>
-                <p>Accumulating several inspections of the asset can help us create a digital picture of its life cycle and with every iteration get better at anticipating its maintenance requirements. In other words, it can be used to find patterns and tune maintenance activities. Well-labelled and accessible data forms the fundamental block towards building a digital twin. IQT is specifically tailored towards this requirement.</p>
-
-                <p>Such a tool can be useful for anyone in the industry who own, operate or maintain railway assets such as fleet-owners, rolling stock manufacturers, maintainers, infrastructure owners, railway consultancies, etc.</p>
-
-                <figure class="style1">
-                    <img src="./assets/post-001-fig-5.jpg" alt="IQT workflow" style="width:80%">
-                    <figcaption>Simple layout for finding components during inspection (Seen on an iPad)</figcaption>
-                </figure>
-
-                <h2>Our design principles:</h2>
-
-                <table class="style1" style="width:100%">
-                    <tr>
-                      <th style="width:33%">SIMPLE</th>
-                      <th style="width:33%">FLEXIBLE</th>
-                      <th style="width:33%">FOCUSSED</th>
-                    </tr>
-                    <tr>
-                        <td>The application is simple to use and intuitive. The setting up of the inspection worklist can be done with  a simple text file with the component list</td>
-                        <td>The application works well for assets with varying complexities.</td>
-                        <td>Specially designed for rolling stock inspection activities in terms of number of components and reporting structure.</td>
-                    </tr>
-
-                    <tr>
-                      <td>The web application is easily accessible from any electronic device and a basic inspection can be easily created with the available templates</td>
-                      <td>Easy to record, edit, delete, modify remarks for the user – making it easy to work collaboratively by different users and over a long time on an asset</td>
-                      <td>Focus on simple, efficient and annotated data collection which is important for data-driven diagnostics.</td>
-                    </tr>
-                </table>
-
-                <figure class="style1">
-                    <img src="./assets/post-001-fig-6.jpg" alt="IQT workflow" style="width:80%">
-                    <figcaption>The setting up of the inspection worklist can be done with a simple text file (Seen on an iPad)</figcaption>
-                </figure>
-
-                <!-- <h3>Simple</h3>
-                <ul class="disc">
-                    <li>The application is simple to use and intuitive. The setting up of the inspection worklist can be done with  a simple text file with the component list</li>
-                    <li>The web application is easily accessible from any electronic device and a basic inspection can be easily created with the available templates</li>
-                 </ul>
-                <h3>Flexible</h3>
-                <ul class="disc">
-                    <li>The application works well for assets with varying complexities.</li>
-                    <li>Easy to record, edit, delete, modify remarks for the user – making it easy to work collaboratively by different users and over a long time on an asset</li>
-                 </ul>
-                 <h3>Focussed</h3>
-                 <ul class="disc">
-                    <li>Specially designed for rolling stock inspection activities in terms of number of components and reporting structure. </li>
-                    <li>Focus on simple, efficient and annotated data collection which is important for data-driven diagnostics. </li>
-                 </ul>
-                -->
-
-                <h2>What do we offer?</mark></h2>
-                <ul class="disc">
-                    <li>Proprietary application <mark>tailor-made for rolling stock</mark> by our in-house experts</li>
-                    <li>A <mark>iOS application</mark> designed for iPad mini along with the device</li>
-                    <li>A <mark>web application</mark> for creating and reporting inspection reports</li>
-                    <li>APIs to link our inspection data with <mark>analytics services</mark></li>
-                    <li><mark>Support</mark> for application updates and general maintenance  </li>
-                 </ul>
-
-                 If you have any questions/comments or interested in the application in general, please contact me, or my colleague.
-
-                 <a href=mailto:"vkrishna@systra.com" class="list-link" style="text-decoration:underline">vkrishna@systra.com</a>
-                 <a href=mailto:"dfraschini@systra.com" class="list-link" style="text-decoration:underline">dfraschini@systra.com</a>
-
-                <hr class="style2">
                 <!--<p style="text-align:center; font-size: 30px;"> &#69685; </p> -->
             </div>
         </div>
