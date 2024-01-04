@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawSeriesChart);
+
+  function drawSeriesChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['ID', 'Life Expectancy', 'Fertility Rate', 'Region',     'Population'],
+      ['CAN',    80.66,              1.67,      'North America',  33739900],
+      ['DEU',    79.84,              1.36,      'Europe',         81902307],
+      ['DNK',    78.6,               1.84,      'Europe',         5523095],
+      ['EGY',    72.73,              2.78,      'Middle East',    79716203],
+      ['GBR',    80.05,              2,         'Europe',         61801570],
+      ['IRN',    72.49,              1.7,       'Middle East',    73137148],
+      ['IRQ',    68.09,              4.77,      'Middle East',    31090763],
+      ['ISR',    81.55,              2.96,      'Middle East',    7485600],
+      ['RUS',    68.6,               1.54,      'Europe',         141850000],
+      ['USA',    78.09,              2.05,      'North America',  307007000]
+    ]);
+
+    var options = {
+      title: 'Fertility rate vs life expectancy in selected countries (2010).' +
+        ' X=Life Expectancy, Y=Fertility, Bubble size=Population, Bubble color=Region',
+      hAxis: {title: 'Life Expectancy'},
+      vAxis: {title: 'Fertility Rate'},
+      bubble: {textStyle: {fontSize: 11}}
+    };
+
+    var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+    chart.draw(data, options);
+  }
+  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visakh Krishna | The IQT project</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.jpg">
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Swiper.js styles -->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <meta property="og:title" content="Digitalisation of Rolling Stock Inspection" />
+    <meta property="og:type" content="Blog post" />
+    <meta property="og:url" content="https://visakhkrishna.github.io/consultancy_research/post-001-iqt-begins.html" />
+    <meta property="og:image" content="https://visakhkrishna.github.io/consultancy_research/assets/post-001-fig-1.jpeg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="An October journey to the white north" />
+    <meta property="og:description" content="An easy-to-use digital tool for inspection services in the railway industry
+    " />
+    <style>
+        table.style1 {
+          font-family: 'Poppins', sans-serif;
+          font-size: var(--font-size-llsm);
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+          vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+  <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+
+  </body>
+  </html>

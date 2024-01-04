@@ -1,5 +1,54 @@
 <html lang="en">
 <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawSeriesChart);
+
+  function drawSeriesChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Asset',	'Cost at installation (10^ dollars)',	'Operational life in years'],
+      ['Hydroelectric dams',	9.7,	110],
+      ['Steel bridges', 7.7,	110],
+      ['Nuclear reactor', 10.0,	50],
+      ['Railway wagon', 5.3,	40],
+      ['Electric locomotive', 6.7,	35],
+      ['Metro train', 7.0,	35],
+      ['Highspeed train', 7.7,	35],
+      ['Fighter jets', 8.0,	30],
+      ['Heavy trucks', 6.0,	30],
+      ['Diesel locomotive', 6.5,	30],
+      ['Container ships', 8.3,	28],
+      ['Commercial aircraft', 8.7,	25],
+      ['Trucks', 5.3,	23],
+      ['Passenger bus', 5.7,	15],
+      ['ICE car', 4.8,	12],
+      ['Air craft engine', 7.0,	9],
+      ['TV', 3.7,	8],
+      ['Laptop', 3.5,	4],
+      ['Website', 4.0,	4],
+      ['Mobile phone', 3.0,	3]
+
+
+    ]);
+
+    var options = {
+      title: 'Estimated operational life vs Cost at purchase/installation of Assets' +
+        ' X=Life Expectancy, Y=Fertility, Bubble size=Population, Bubble color=Region',
+      hAxis: {title: 'Average operational life in years', maxValue:12, minValue:1},
+      vAxis: {title: 'Price in 10^y $ at purchase/installation'},
+      chartArea:{left:50,top:50,width:'75%',height:'80%'},
+      height: '100%',
+      width: '100%',
+      bubble: {textStyle: {fontSize: 11}},
+      fontName:'Roboto Slab'
+    };
+
+    var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+    chart.draw(data, options);
+  }
+  </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,42 +85,6 @@
           vertical-align: top;
         }
     </style>
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawSeriesChart);
-
-    function drawSeriesChart() {
-
-      var data = google.visualization.arrayToDataTable([
-        ['ID', 'Life Expectancy', 'Fertility Rate', 'Region',     'Population'],
-        ['CAN',    80.66,              1.67,      'North America',  33739900],
-        ['DEU',    79.84,              1.36,      'Europe',         81902307],
-        ['DNK',    78.6,               1.84,      'Europe',         5523095],
-        ['EGY',    72.73,              2.78,      'Middle East',    79716203],
-        ['GBR',    80.05,              2,         'Europe',         61801570],
-        ['IRN',    72.49,              1.7,       'Middle East',    73137148],
-        ['IRQ',    68.09,              4.77,      'Middle East',    31090763],
-        ['ISR',    81.55,              2.96,      'Middle East',    7485600],
-        ['RUS',    68.6,               1.54,      'Europe',         141850000],
-        ['USA',    78.09,              2.05,      'North America',  307007000]
-      ]);
-
-      var options = {
-        title: 'Fertility rate vs life expectancy in selected countries (2010).' +
-          ' X=Life Expectancy, Y=Fertility, Bubble size=Population, Bubble color=Region',
-        hAxis: {title: 'Life Expectancy'},
-        vAxis: {title: 'Fertility Rate'},
-        bubble: {textStyle: {fontSize: 11}}
-      };
-
-      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
-      chart.draw(data, options);
-    }
-    </script>
-
-
 </head>
 <body>
   <!-- Header -->
@@ -137,7 +150,7 @@
                   <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
                 </button>
               </form>
-              <script>
+              <!-- <script>
                 const f = document.getElementById('form');
                 const q = document.getElementById('query');
                 const google = 'https://www.google.com/search?q=site%3A+';
@@ -151,7 +164,7 @@
                 }
 
                 f.addEventListener('submit', submitted);
-              </script>
+              </script> -->
             <span class="form-note">Or press ESC to close.</span>
         </div>
         <div class="btn form-close-btn icon-box place-items-center" id="form-close-btn">
@@ -194,6 +207,8 @@
 
                 <h2>What is Obsolescence management?</h2>
                 <p>IQT is our mobile & web-based digital application that can be used to record inspections and send a report to the asset owner for their business requirements. This is a part of our ongoing drive towards digitalisation of asset maintenance activities in the railway sector in Sweden. It has been developed after extensive survey of various stakeholders in the Swedish rail industry such as inspectors, asset-owners and maintainers.</p>
+                <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+
 
                 <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
 
