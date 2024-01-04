@@ -29,19 +29,16 @@
       ['Laptop', 3.5,	4],
       ['Website', 4.0,	4],
       ['Mobile phone', 3.0,	3]
-
-
     ]);
 
     var options = {
-      title: 'Estimated operational life vs Cost at purchase/installation of Assets' +
-        ' X=Life Expectancy, Y=Fertility, Bubble size=Population, Bubble color=Region',
-      hAxis: {title: 'Average operational life in years', maxValue:12, minValue:1},
-      vAxis: {title: 'Price in 10^y $ at purchase/installation'},
-      chartArea:{left:50,top:50,width:'75%',height:'80%'},
+      title: 'Estimated operational life vs Cost at purchase/installation of Assets',
+      hAxis: {title: 'Price in log10($) at purchase/installation',  minValue:1},
+      vAxis: {title: 'Average operational life in years'},
+      chartArea:{left:50,top:50,width:'85%',height:'80%'},
       height: '100%',
       width: '100%',
-      bubble: {textStyle: {fontSize: 11}},
+      bubble: {textStyle: {fontSize: 12}},
       fontName:'Roboto Slab'
     };
 
