@@ -45,7 +45,7 @@
     var data = google.visualization.arrayToDataTable([
       ['Asset','Installation cost',	'Operational life in years','Class','Unit'],
       ['Hydropower-dams (>700 MW)', 5e9,100, 'Energy',1],
-      ['Nuclear reactor',1e10,50,'Energy',1],
+      ['Nuclear reactor',1e10,50,'Energy',10],
       ['Goods wagon',2e5,40,'Rolling stock',1],
       ['Electric loco.',5e6,35,'Rolling stock',1],
       ['Metro trainset',1e7,40, 'Rolling stock',1],
@@ -213,7 +213,7 @@
                        <li> the failure rate is minimum and fairly constant </li>
                        <li> planned periodic maintenance is mostly enough to keep the asset functioning</li>
                        <li> component replacements are readily available in the market in the near future
-                      <li>  asset utilisation is maximised
+                      <li>  asset utilisation is maximum
                  </ul>
                 <p>As the asset reaches its 'end of life', failure rate increases, and require substantial efforts to keep it running. In this 'wear and tear' phase, components that make the asset too start running out and exacerbate the problem. </p>
 
@@ -227,9 +227,14 @@
                 
                 <h3>What is large and what is a long life-time then?</h3>
 
-                This leads to the next question. When do we choose to manage obsolescence then? There is no universal answer to this question although we can deduce an estimate from what organizations have been doing. 
+                <p>This leads to the next question. When do we choose to manage obsolescence then? There is no universal answer to this question although we can deduce a rough pattern by looking where obsolescence management is currently a topic of interest.</p>
 
-                In the 
+                <figure>
+                  <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+                  <figcaption> <b>Figure:</b> Estimated operational life vs Cost at purchase/installation of Assets. Costs might vary within an order of magnitude depending on different specifications. The figures here only cover the initial fixed costs and do not cover maintenance or operational costs. Determined from publically available data (links provided here) </figcaption>
+                </figure>
+
+                <p>In the figure above, I have mapped various assets from a mobile phone to a nuclear reactor with their initial cost of installation/purchase (on a logarithmic scale), and the expected operational life. The costs only constitute the initial installation cost and doesn't account for maintenance or operational costs. The costs might vary </p>
 
                 <h2> Why do you need to manage obsolescence?</h2>
                 <p><i>"If it is old, you can always buy newer updated models. So why bother managing obsolescence?"</i></p>
@@ -239,10 +244,7 @@
 
                 One of the greatest myths related to obsolescence management is that it is only an End-Of-Life Activity. It is a continuous process and should be applied right from product development stage.
 
-                <figure>
-                  <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
-                  <figcaption> <b>Figure:</b> Estimated operational life vs Cost at purchase/installation of Assets. Costs might vary within an order of magnitude depending on different specifications. The figures here only cover the initial fixed costs and do not cover maintenance or operational costs. Determined from publically available data (links provided here) </figcaption>
-                </figure>
+                
 
 
 
