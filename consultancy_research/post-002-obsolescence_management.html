@@ -45,14 +45,14 @@
     var data = google.visualization.arrayToDataTable([
       ['Asset','Installation cost',	'Operational life in years','Class','Unit'],
       ['Hydropower-dams (>700 MW)', 5e9,100, 'Energy',1],
-      ['Nuclear reactor',1e10,50,'Energy',10],
+      ['Nuclear reactor',1e10,50,'Energy',2],
       ['Goods wagon',2e5,40,'Rolling stock',1],
       ['Electric loco.',5e6,35,'Rolling stock',1],
       ['Metro trainset',1e7,40, 'Rolling stock',1],
       ['Highspeed trainset',5e7,35, 'Rolling stock',1],
-      ['Fighter jets',1e8,30, 'Aeronautical',1],
+      ['Fighter jets',1e8,30, 'Aeronautical',10],
       ['Diesel loco.',3e6,25, 'Rolling stock',1],
-      ['Commercial aircraft',2e8,25, 'Aeronautical',1],
+      ['Commercial aircraft',2e8,25, 'Aeronautical',10],
       ['Trucks',2e5,20,	'Road transport',1],
       ['Passenger bus',3e5,15, 'Road transport',1],
       ['ICE car',3e4,12, 'Road transport',1],
@@ -219,7 +219,7 @@
 
                 <p> For smaller assets after a certain point it might be feasible to replace entirely. However for larger assets with longer lifetimes it is sometimes necessary to prolong its remaining useful life by managing the obsolescence instead. This forms the core premise for obsolescence management as a practice.</p> 
                 
-                <p>In addition to the first-order of effects in terms of asset utilisation, it can also lead to higher order effects in terms of sustainability and increased capacity.</p>
+                <p>In addition to the first-order of effects in terms of asset utilisation, this can also lead to higher order effects in terms of sustainability and increased capacity.</p>
 
                 <blockquote class="quote">
                   <p><span><i class="ri-double-quotes-l"></i></span> for large assets with longer lifetimes it is sometimes necessary to prolong its remaining useful life <span><i class="ri-double-quotes-r"></i></span></p>
@@ -227,7 +227,14 @@
                 
                 <h3>What is large and what is a long life-time then?</h3>
 
-                <p>This leads to the next question. When do we choose to manage obsolescence then? There is no universal answer to this question although we can deduce a rough pattern by looking where obsolescence management is currently a topic of interest.</p>
+                <p>This leads to the next question. When do we choose to manage obsolescence then? While there is no universal answer to this question, we can deduce a rough pattern by looking at the sectors where obsolescence management is prominently deployed.</p>
+                 
+                <p>The product sectors of military and aerospace industries, medical technology, automotive industries, telecommunication industries, and nuclear energy industries are the most affected by obsolescence \cite. The fundamental guiding principle is usually to keep managing obsolescence as long as the failure rate stays within the acceptable level of reliability.</p>
+
+                <iframe src="https://pdf.sciencedirectassets.com/271461/1-s2.0-S0043164820X00093/1-s2.0-S0043164820309212/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjECYaCXVzLWVhc3QtMSJHMEUCIQC5FwDhgRspFgrcnV7luEfqlbhBsSTdZnRkgSYrb2fMTgIgE%2F2ylJcw2ODVhbzQ46BKxzmCOHOu1OVZ6Ir226gdMQUqvAUIvv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDKCEQuDbpn760p%2FgvSqQBUU2JKpX2mho01Xu39xGTl0%2FvDBSyin6mP15uDErSinlGz54LUbVz%2Bd06ZyOsEWzg3HwtkB6iTOVmzQUhT7R7kdmqHPWEgL6tbB6rr%2BciQMViyY7kdARVLC%2Fk%2B3DUbGUmaJu%2B4YrF85HrYg4NajudoETaIEy6Qp1aiMUGiNkmtgxNMJB9wfp3nTCzhEEU45jDshc4T3Xlj8urlCfYW6ZpYOBjDM0f46R77D7MGPdZR3KQhxonI%2BZuki2iQ6MqghGOzN6g7YrXa2AQnC6SuF%2BUziJGAqlXUZiP8k5He%2F%2BumGNU2xgTLmu%2BXOOOZWVaVGgQXIfklaUZtRuFwIfGwewRf7HxdvCrX%2F2ttPLQ%2FA9xHEWIvUexMT1G0%2BtWM03UDCdWPPwCXhFGZf85oGVwIACr4V1VXRB7OmrmPX6g8MkupA0PdksM30TxnPhz9NkZ6yVqugfu0RVDtZj3kIS1cxP1uUQgS8yK7lV%2BlfbUheQKOm4KI%2FC%2F7qmL8XDv1XQbRujL0SRgixWBG4Hv4Y0c%2FMmfGpMhGUSipAPVbcFF%2BlCT7xz%2BccVROZIr%2FQbq8aikWczmn9nsOO2htsoNyuCS62tZWy9Mv1ymf2cCuCNvAtPt2qqLZSWORpz96GVsKGx6GKacKh4kHlIhkMvGNh5S1RmL0e8WSG7ikaHRMSaobP4iCzt8v7WlGND%2FaNaodT7vAi%2BBd8rNJk%2Fj%2BWd3x%2FGyRzFRgDSUUOr0Lc8MD4PSA%2BR0kvx%2B3hzsi7HlwCRCxw9kSRUv3hrMM7dU8jYTFbXsG90zsp0beq0EM5lgPWGN5fqOqD8xDgUztEcMb5xIUmnkj6mBiCwrzylaToJiE9mJMz11XDgWBjhSSmlH%2FvoMFKJCNRfML%2FG6qwGOrEBNtpJgapQN8yrFJ%2BOiYQA55abYUGFsQEX%2FWlwvU05jAK%2FxfDyQm6FNqDRjHfgA%2F7GpfnWEVU%2FYqV1Nv%2BhRjR%2Ft5apa48x%2F%2FSA7QHtw%2FD1hNNCu0sFsQrqSzEgioJ1zkovzFCQyJc5%2B8pGD1NirkOy7x8JOIRJYoGmm1qRiWk6ROsMDJIQhfEFt0MD3mrijF9Skhhjh6Ul%2FoBOAIHXbrQo%2F4nLdZ6ZNqrWjKL9h7S672OA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240107T145000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYXLU2TL7O%2F20240107%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b94dbca0f729329860676b0d9241fdf3e41b8d5d791be7471e26d39a45db9303&hash=bb919e7f1a3c2cafbf63cb98ba16e9e2edfc425652b0112e20847a2c18a58b68&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0043164820309212&tid=spdf-1fefd613-1d32-4def-8ab7-f075bd85ed9f&sid=5c613f3603c99-4cd6-bd29-d578867a2cc6gxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=09065954560257530557&rr=841d02b519e7993e&cc=se" width="100%" height="600" allow="autoplay"></iframe>
+               
+
+                <p></p>
 
                 <figure>
                   <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
