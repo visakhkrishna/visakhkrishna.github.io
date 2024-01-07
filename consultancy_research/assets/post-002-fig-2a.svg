@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="post-002-fig-2.svg">
+   sodipodi:docname="post-002-fig-2a.svg">
   <defs
      id="defs2">
     <marker
@@ -117,11 +117,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4776093"
-     inkscape:cx="208.78135"
-     inkscape:cy="98.211409"
+     inkscape:zoom="1.4382813"
+     inkscape:cx="184.50878"
+     inkscape:cy="114.51864"
      inkscape:document-units="mm"
-     inkscape:current-layer="g1792"
+     inkscape:current-layer="g1825"
      showgrid="false"
      inkscape:window-width="1366"
      inkscape:window-height="705"
@@ -275,23 +275,23 @@
              inkscape:connector-curvature="0" />
           <text
              id="text4864-9"
-             y="264.52252"
-             x="104.67157"
+             y="266.13406"
+             x="98.225349"
              style="font-style:normal;font-weight:normal;font-size:7.76111126px;line-height:0.40000001;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
              xml:space="preserve"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-               y="264.52252"
-               x="104.67157"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;font-family:Arial;-inkscape-font-specification:'Arial, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+               y="266.13406"
+               x="98.225349"
                id="tspan4862-5"
                sodipodi:role="line">Extending </tspan><tspan
                id="tspan1796"
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-               y="268.03751"
-               x="104.67157"
+               style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;font-family:Arial;-inkscape-font-specification:'Arial, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+               y="269.64047"
+               x="98.225349"
                sodipodi:role="line">useful life</tspan><tspan
                style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;font-family:Arial;-inkscape-font-specification:'Arial, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-               y="271.55249"
-               x="104.67157"
+               y="273.14688"
+               x="98.225349"
                sodipodi:role="line"
                id="tspan1454" /></text>
         </g>

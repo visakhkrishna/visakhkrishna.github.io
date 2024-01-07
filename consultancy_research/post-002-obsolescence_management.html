@@ -44,22 +44,22 @@
 
     var data = google.visualization.arrayToDataTable([
       ['Asset','Installation cost',	'Operational life in years','Class','Unit'],
-      ['Hydropower-dams (>700 MW)', 5e9,100, 'Energy',1],
-      ['Nuclear reactor',1e10,50,'Energy',2],
-      ['Goods wagon',2e5,40,'Rolling stock',1],
-      ['Electric loco.',5e6,35,'Rolling stock',1],
-      ['Metro trainset',1e7,40, 'Rolling stock',1],
-      ['Highspeed trainset',5e7,35, 'Rolling stock',1],
-      ['Fighter jets',1e8,30, 'Aeronautical',10],
-      ['Diesel loco.',3e6,25, 'Rolling stock',1],
-      ['Commercial aircraft',2e8,25, 'Aeronautical',10],
-      ['Trucks',2e5,20,	'Road transport',1],
-      ['Passenger bus',3e5,15, 'Road transport',1],
-      ['ICE car',3e4,12, 'Road transport',1],
-      ['TV',3e3,8, 'Consumer electronics',1],
-      ['Laptop',2e3,4, 'Consumer electronics',1],
-      ['Mobile phone',8e2,3, 'Consumer electronics',1],
-      ['Container ships',1e8,28, 'Water transport',1]
+      ['Hydropower-dams (>700 MW)', 5e9,100, 'Energy',5],
+      ['Nuclear reactor',1e10,50,'Energy',5],
+      ['Goods wagon',2e5,40,'Rolling stock',5],
+      ['Electric loco.',5e6,35,'Rolling stock',5],
+      ['Metro trainset',1e7,40, 'Rolling stock',5],
+      ['Highspeed trainset',5e7,35, 'Rolling stock',5],
+      ['Fighter jets',1e8,30, 'Aeronautical',5],
+      ['Diesel loco.',3e6,25, 'Rolling stock',5],
+      ['Commercial aircraft',2e8,25, 'Aeronautical',5],
+      ['Trucks',2e5,20,	'Road transport',5],
+      ['Passenger bus',3e5,15, 'Road transport',5],
+      ['ICE car',3e4,12, 'Road transport',5],
+      ['TV',3e3,8, 'Consumer electronics',3],
+      ['Laptop',2e3,4, 'Consumer electronics',3],
+      ['Mobile phone',8e2,3, 'Consumer electronics',3],
+      ['Container ships',1e8,28, 'Water transport',5]
     ]);
 
     var options = {
@@ -189,87 +189,81 @@
 
                 <p>In a series of blogposts, I try to look into the obsolescence-related problems from the perspective of asset owners in the railway industry. This marks the first post on the topic.</p>
 
-                <h2>What is Obsolescence?</h2>
+                <h1>What is Obsolescence?</h1>
                 <p>Obsolescence means the state of no longer being usable or needed. Specifically within the context of asset management, it can mean either (or both) of the two below (EN 62404)</p>
                 <ul class="disc">
                     <li>Transition from availability to unavailability from the original manufacturer </li>
                     <li>Permanent transition from operability to non-functionality of the asset due to external reasons</li>
                 </ul>
-                This is applicable for any asset. Therefore obsolescence management would br
+                This is applicable for any asset - hardware, software or intellectual property. Within this context, obsolescence management refers to the co-ordinated activities to direct and control an organization with regard to obsolescence (EN 62404).
 
-                <h3>Some examples from daily life</h3>
-                 <p>Most of the time, technological advancement renders the asset obsolete with more advanced upgrades available to buy in the market - leading to a dwindling supply of older spare parts. For example, it is hard to replace the battery of a laptop from 10 years ago even though the device might be perfectly fine in all other ways. Sometimes external factors like change in regulations can also make an available product obsolete. For example: cars that do not adhere to new pollution norms or refrigerators not following new energy ratings. Even brand new inventory can go unsold in these scenarios.</p>
+                <blockquote class="quote">
+                  <p><span><i class="ri-double-quotes-l"></i></span> ...co-ordinated activities to direct and control an organization with regard to obsolescence. <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>  
 
-                 <p>The asset could also itself become redundant such as mp3 players that got replaced by smartphones. Here, there isnt any scope of even having newer upgrades. Sometimes, the utility itself becomes obsolete due to external factors/system effects. CD player is one such example. Therefore it can be very hard to predict obsolescence, let alone manage it.</p>
+                <h1>Different types of obsolescence</h1>
+                Obsolescence can be broadly cateogorised into the following types: 
+                <table class="style1" style="width:100%">
+                  <tr>
+                    <th style="width:33%; text-align: center; font-size: var(--font-size-md)">Technological</th>
+                    <th style="width:33%; text-align: center; font-size: var(--font-size-md)">Logistical</th>
+                    <th style="width:33%; text-align: center; font-size: var(--font-size-md)">Functional</th>
+                  </tr>
+                  <tr>
+                      <td>More technologically advanced components become available leading to diminishing supply of the older parts which might still be available in the inventory. </td>
+                      <td>No longer able to procure/manufacture constituent components to support the asset. This can be gradual or sudden depending on the supply chain and might not necessarily be due to technological obsolescence.  </td>
+                      <td>The component still operates as intended and can still be manufactured and supported, but the specific requirements for the component's function might have changed.</td>
+                  </tr>
+                  <tr>
+                    <td>For e.g. it will be hard to find carburetors for older automobiles since fuel injection technology has replaced them while performing the same function</td>
+                    <td>For e.g. when a manufacturer goes bankrupt and a like-for-like replacement is not available in the market. </td>
+                    <td>For e.g. Installation of USB2.0 ports for charging in passenger vehicles.</td>
+                </tr>
 
-                 <figure class="style1">
-                     <img src="./assets/post-002-fig-2.svg" alt="IQT workflow" style="width:65%">
-                     <figcaption><b>Figure:</b> Reliability bathtub curve</figcaption>
-                 </figure>
+              </table>                              
+                
+                <p>Cases often fall under multiple types since reaching a specific kind of obsolescence could accelerate another kind. For e.g. it is only a matter of time for technological obsolescence to result in logistical obsolescence in consumer electronics. Depending on the type, various strategies for obsolescence management can be devised. Planned obsolescence however should not be confused within this classification. As the name suggests it is<em> not really intended</em> to be managed by the manufacturer in the first place. </p>
 
-                 <h3>Useful life & End of life (EOL)</h3>
+                
+                <figure class="style1">
+                  <img src="./assets/post-002-fig-2.svg" alt="IQT workflow" style="width:65%">
+                  <figcaption><b>Figure:</b> Reliability bathtub curve</figcaption>
+                </figure>
+
+
+                 <h2>Useful life & End of life (EOL)</h2>
                  <p> A good indicator of whether the asset is headed towards obsolescence is by evaluating its remaining useful life. This is illustrated by the reliability 'bathtub' curve in the figure. While the X axis depicts duration of operation, the Y axis depicts the failure rate. It is desired that the asset stays in the 'useful life phase' as much as possible where
                  <ul class="disc">
                        <li> the failure rate is minimum and fairly constant </li>
                        <li> planned periodic maintenance is mostly enough to keep the asset functioning</li>
                        <li> component replacements are readily available in the market in the near future
-                      <li>  asset utilisation is maximum
+                      <li>  asset utilisation is high
                  </ul>
-                <p>As the asset reaches its 'end of life', failure rate increases, and require substantial efforts to keep it running. In this 'wear and tear' phase, components that make the asset too start running out and exacerbate the problem. </p>
 
-                <p> For smaller assets after a certain point it might be feasible to replace entirely. However for larger assets with longer lifetimes it is sometimes necessary to prolong its remaining useful life by managing the obsolescence instead. This forms the core premise for obsolescence management as a practice.</p> 
-                
-                <p>In addition to the first-order of effects in terms of asset utilisation, this can also lead to higher order effects in terms of sustainability and increased capacity.</p>
+                 <blockquote class="quote">
+                  <p><span><i class="ri-double-quotes-l"></i></span> A good indicator of whether the asset is headed towards obsolescence is by evaluating its remaining useful life. <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>  
 
-                <blockquote class="quote">
-                  <p><span><i class="ri-double-quotes-l"></i></span> for large assets with longer lifetimes it is sometimes necessary to prolong its remaining useful life <span><i class="ri-double-quotes-r"></i></span></p>
-                </blockquote>         
-                
-                <h3>What is large and what is a long life-time then?</h3>
 
-                <p>This leads to the next question. When do we choose to manage obsolescence then? While there is no universal answer to this question, we can deduce a rough pattern by looking at the sectors where obsolescence management is prominently deployed.</p>
-                 
-                <p>The product sectors of military and aerospace industries, medical technology, automotive industries, telecommunication industries, and nuclear energy industries are the most affected by obsolescence \cite. The fundamental guiding principle is usually to keep managing obsolescence as long as the failure rate stays within the acceptable level of reliability.</p>
+                <p>As the asset reaches its 'end of life', failure rate increases, and require substantial efforts to keep it running. In this 'wear and tear' phase, components that maket the asset too start running out and exacerbate the problem. Therefore, the fundamental guiding principle is  to keep managing obsolescence within an acceptable level of reliability to prolong its useful life.</p>
 
-                <iframe src="https://pdf.sciencedirectassets.com/271461/1-s2.0-S0043164820X00093/1-s2.0-S0043164820309212/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjECYaCXVzLWVhc3QtMSJHMEUCIQC5FwDhgRspFgrcnV7luEfqlbhBsSTdZnRkgSYrb2fMTgIgE%2F2ylJcw2ODVhbzQ46BKxzmCOHOu1OVZ6Ir226gdMQUqvAUIvv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDKCEQuDbpn760p%2FgvSqQBUU2JKpX2mho01Xu39xGTl0%2FvDBSyin6mP15uDErSinlGz54LUbVz%2Bd06ZyOsEWzg3HwtkB6iTOVmzQUhT7R7kdmqHPWEgL6tbB6rr%2BciQMViyY7kdARVLC%2Fk%2B3DUbGUmaJu%2B4YrF85HrYg4NajudoETaIEy6Qp1aiMUGiNkmtgxNMJB9wfp3nTCzhEEU45jDshc4T3Xlj8urlCfYW6ZpYOBjDM0f46R77D7MGPdZR3KQhxonI%2BZuki2iQ6MqghGOzN6g7YrXa2AQnC6SuF%2BUziJGAqlXUZiP8k5He%2F%2BumGNU2xgTLmu%2BXOOOZWVaVGgQXIfklaUZtRuFwIfGwewRf7HxdvCrX%2F2ttPLQ%2FA9xHEWIvUexMT1G0%2BtWM03UDCdWPPwCXhFGZf85oGVwIACr4V1VXRB7OmrmPX6g8MkupA0PdksM30TxnPhz9NkZ6yVqugfu0RVDtZj3kIS1cxP1uUQgS8yK7lV%2BlfbUheQKOm4KI%2FC%2F7qmL8XDv1XQbRujL0SRgixWBG4Hv4Y0c%2FMmfGpMhGUSipAPVbcFF%2BlCT7xz%2BccVROZIr%2FQbq8aikWczmn9nsOO2htsoNyuCS62tZWy9Mv1ymf2cCuCNvAtPt2qqLZSWORpz96GVsKGx6GKacKh4kHlIhkMvGNh5S1RmL0e8WSG7ikaHRMSaobP4iCzt8v7WlGND%2FaNaodT7vAi%2BBd8rNJk%2Fj%2BWd3x%2FGyRzFRgDSUUOr0Lc8MD4PSA%2BR0kvx%2B3hzsi7HlwCRCxw9kSRUv3hrMM7dU8jYTFbXsG90zsp0beq0EM5lgPWGN5fqOqD8xDgUztEcMb5xIUmnkj6mBiCwrzylaToJiE9mJMz11XDgWBjhSSmlH%2FvoMFKJCNRfML%2FG6qwGOrEBNtpJgapQN8yrFJ%2BOiYQA55abYUGFsQEX%2FWlwvU05jAK%2FxfDyQm6FNqDRjHfgA%2F7GpfnWEVU%2FYqV1Nv%2BhRjR%2Ft5apa48x%2F%2FSA7QHtw%2FD1hNNCu0sFsQrqSzEgioJ1zkovzFCQyJc5%2B8pGD1NirkOy7x8JOIRJYoGmm1qRiWk6ROsMDJIQhfEFt0MD3mrijF9Skhhjh6Ul%2FoBOAIHXbrQo%2F4nLdZ6ZNqrWjKL9h7S672OA&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240107T145000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYXLU2TL7O%2F20240107%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b94dbca0f729329860676b0d9241fdf3e41b8d5d791be7471e26d39a45db9303&hash=bb919e7f1a3c2cafbf63cb98ba16e9e2edfc425652b0112e20847a2c18a58b68&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0043164820309212&tid=spdf-1fefd613-1d32-4def-8ab7-f075bd85ed9f&sid=5c613f3603c99-4cd6-bd29-d578867a2cc6gxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=09065954560257530557&rr=841d02b519e7993e&cc=se" width="100%" height="600" allow="autoplay"></iframe>
-               
+                <h2>Why does obsolescence management matter?</h2>
 
-                <p></p>
-
-                <figure>
+                <figure class="style1">
                   <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
-                  <figcaption> <b>Figure:</b> Estimated operational life vs Cost at purchase/installation of Assets. Costs might vary within an order of magnitude depending on different specifications. The figures here only cover the initial fixed costs and do not cover maintenance or operational costs. Determined from publically available data (links provided here) </figcaption>
+                  <figcaption> <b>Figure:</b> Estimated operational life vs Cost at purchase/installation of Assets. Determined from publically available data </figcaption>
                 </figure>
 
-                <p>In the figure above, I have mapped various assets from a mobile phone to a nuclear reactor with their initial cost of installation/purchase (on a logarithmic scale), and the expected operational life. The costs only constitute the initial installation cost and doesn't account for maintenance or operational costs. The costs might vary </p>
-
-                <h2> Why do you need to manage obsolescence?</h2>
-                <p><i>"If it is old, you can always buy newer updated models. So why bother managing obsolescence?"</i></p>
-                <p>While this train of thought is easy to grasp with assets that have a smaller product life cycle (say for < 5 years), assets that cost beyond a certain threshold are better off finding ways to keep being used.</p>
-
-                
-
-                One of the greatest myths related to obsolescence management is that it is only an End-Of-Life Activity. It is a continuous process and should be applied right from product development stage.
-
-                
-
-
-
-                <p> Obsolescence management as a practice has been fairly prevalent in some niche sectors where the processes of handling obsolescence has become mature. The first application that comes to mind are military applications where it has become a necessity. </p>
-
-                <h2>Obsolescence management in practice</h2>
-                While the above examples are easy to understand the nuances associated with obsolescence, obsolescence can work different time-frames
-
-                It is different from re-use/recycle, decommissioning,
-                retrofitting is a part of it, reverse engineering needs to be involved, supply chain can affect it,
-                It should be a part of the redesign
-
+                <p>In the figure above, I have mapped various assets from a mobile phone to a nuclear reactor with their initial cost of installation/purchase (on a logarithmic scale), and the expected operational life in years. Costs might vary within an order of magnitude depending on different specifications. The figures here only cover the initial fixed costs and do not cover maintenance or operational costs over its lifecycle. The operational life does not account for life extension activities either. </p>
 
                 <blockquote class="quote">
-                    <p><span><i class="ri-double-quotes-l"></i></span> IQT is our mobile & web-based digital application that can be used to record inspections and send a report to the asset owner for their business requirements. <span><i class="ri-double-quotes-r"></i></span></p>
-                </blockquote>
+                  <p><span><i class="ri-double-quotes-l"></i></span> ..unless the obsolescence is managed, the asset will not be utilised to its maximum value. <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>  
 
+                <p>Smaller assets such as consumer electronics can be replaced after a certain point. Large and complex assets are however costly and come with longer lifecycles. They are composed of smaller subsystems and components that might individually have a much shorter lifecycle compared to the asset itself. Therefore unless the obsolescence is managed, the asset will not be utilised to its maximum value. This forms the core premise for obsolescence management as a practice in sectors that manage large and complex assets.</p> 
 
+                <p> The product sectors of military and aerospace industries, medical technology, automotive industries, telecommunication industries, and nuclear energy industries are the most affected by obsolescence \cite. </p>
+                
                 <h2>Some useful reading</h2>
 
                 <p>The workflow is simple and easy to use. It consists of three components as described in the figure</p>
