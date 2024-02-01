@@ -1,0 +1,340 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visakh Krishna | Obsolescence management I</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.jpg">
+  <!-- Remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Swiper.js styles -->
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <meta property="og:title" content="Anatomy of obsolescence management" />
+  <meta property="og:type" content="Blog post" />
+  <meta property="og:url" content="https://visakhkrishna.github.io/consultancy_research/post-002-obsolescence-management.html" />
+  <meta property="og:image" content="https://visakhkrishna.github.io/consultancy_research/assets/post-002-fig-1.jpeg" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="obsolescence-management-i" />
+  <meta property="og:description" content="An introduction to obsolescence management" />
+  <style>
+      table.style1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: var(--font-size-llsm);
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        vertical-align: top;
+      }
+  </style>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawSeriesChart);
+
+  function drawSeriesChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Asset','Installation cost',	'Operational life in years','Class','Unit'],
+      ['Hydropower-dams (>700 MW)', 5e9,100, 'Energy',5],
+      ['Nuclear reactor',1e10,50,'Energy',5],
+      ['Goods wagon',2e5,40,'Rolling stock',5],
+      ['Electric loco.',5e6,35,'Rolling stock',5],
+      ['Metro trainset',1e7,40, 'Rolling stock',5],
+      ['Highspeed trainset',5e7,35, 'Rolling stock',5],
+      ['Fighter jets',1e8,30, 'Aeronautical',5],
+      ['Diesel loco.',3e6,25, 'Rolling stock',5],
+      ['Commercial aircraft',2e8,25, 'Aeronautical',5],
+      ['Trucks',2e5,20,	'Road transport',5],
+      ['Passenger bus',3e5,15, 'Road transport',5],
+      ['ICE car',3e4,12, 'Road transport',5],
+      ['TV',3e3,8, 'Consumer electronics',5],
+      ['Laptop',2e3,4, 'Consumer electronics',5],
+      ['Mobile phone',8e2,3, 'Consumer electronics',5],
+      ['Container ships',1e8,28, 'Water transport',5]
+    ]);
+
+    var options = {
+      hAxis: {title: 'Installation cost of asset in $',  minValue:1, logScale: true},
+      legend:{},
+      vAxis: {title: 'Average operational life in years'},
+      chartArea:{left:50,top:50,width:'70%',height:'80%',backgroundColor:'#F2F2F2'},
+      backgroundColor:{fill:'#F2F2F2', stroke: '#00000',strokeWidth: 3},
+      height: '100%',
+      width: '80%',
+      bubble: {textStyle: {fontSize: 9}, opacity: .5},
+      fontName:'Roboto Slab'
+    };
+
+    var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+    chart.draw(data, options);
+  }
+  </script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+
+      <nav class="navbar container">
+          <a href="../index.html">
+            <h2 class="logo">   <img src="../assets/images/logo_.svg" alt="" height="50"> </h2>
+          </a>
+
+          <div class="menu" id="menu">
+              <ul class="list">
+                  <li class="list-item">
+                      <a href="../index.html" class="list-link">HOME</a>
+                  </li>
+                  <li class="list-item">
+                      <a href="../consultancy_research/index.html" class="list-link">CONSULTANCY & RESEARCH</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="../book_reviews/index.html" class="list-link">BLOG</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="../about.html" class="list-link">ABOUT</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#contact-section" class="list-link">CONTACT</a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="list list-right">
+              <button class="btn place-items-center" id="theme-toggle-btn">
+                  <i class="ri-sun-line sun-icon"></i>
+                  <i class="ri-moon-line moon-icon"></i>
+              </button>
+
+              <button class="btn place-items-center" id="search-icon">
+                  <i class="ri-search-line"></i>
+              </button>
+
+              <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                  <i class="ri-menu-3-line open-menu-icon"></i>
+                  <i class="ri-close-line close-menu-icon"></i>
+              </button>
+          </div>
+
+      </nav>
+
+  </header>
+
+    <!-- Search -->
+    <div class="search-form-container container" id="search-form-container">
+        <div class="form-container">
+            <!--<form action="" class="form">
+                <input class="form-input" type="text" placeholder="What are you dlooking for?">
+                <button class="btn form-btn icon-box" type="submit">
+                    <i class="ri-search-line"></i>
+                </button>
+            </form> -->
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" class="form-input">
+                <button>
+                  <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                </button>
+              </form>
+              <!-- <script>
+                const f = document.getElementById('form');
+                const q = document.getElementById('query');
+                const google = 'https://www.google.com/search?q=site%3A+';
+                const site = 'visakhkrishna.github.io';
+
+                function submitted(event) {
+                  event.preventDefault();
+                  const url = google + site + '+' + q.value;
+                  const win = window.open(url, '_blank');
+                  win.focus();
+                }
+
+                f.addEventListener('submit', submitted);
+              </script> -->
+            <span class="form-note">Or press ESC to close.</span>
+        </div>
+        <div class="btn form-close-btn icon-box place-items-center" id="form-close-btn">
+            <i class="ri-close-line"></i>
+        </div>
+    </div>
+
+<!-- BLOG EDIT STARTS HERE&#3024;  -->
+
+    <section class="blog-post section-header-offset">
+        <div class="blog-post-container container">
+            <div class="blog-post-data">
+
+                <h3 class="title blog-post-title">How do you handle obsolescence?</h3>
+                <h4 class="title blog-post-subtitle">Obsolescence management as a practice</h4>
+
+                <div class="article-data">
+                    <span>Feb 8th 2024</span>
+                    <span class="article-data-spacer"></span>
+                    <span>4 Min read</span>
+                </div>
+
+                <img src="./assets/post-002-fig-1.jpg" alt="" width="1000">
+
+            </div>
+
+            <div class="container">
+
+                <p>In a series of blogposts, I try to look into the obsolescence-related problems from the perspective of asset owners in the railway industry. This marks the second post on the topic.</p>
+
+                <h1>What do the standards say?</h1>
+                Standards state 
+
+                <h1>What happens in practice?</h1>
+
+                <p>Obsolescence means the state of no longer being usable or needed. Specifically within the context of asset management, it can mean either (or both) of the two below (EN 62404)</p>
+                <ul class="disc">
+                    <li>Transition from availability to unavailability from the original manufacturer </li>
+                    <li>Permanent transition from operability to non-functionality of the asset due to external reasons</li>
+                </ul>
+                This is applicable for any asset - hardware, software or intellectual property. Within this context, obsolescence management refers to the co-ordinated activities to direct and control an organization with regard to obsolescence (EN 62404).
+
+                <blockquote class="quote">
+                  <p><span><i class="ri-double-quotes-l"></i></span> ...co-ordinated activities to direct and control an organization with regard to obsolescence. <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>  
+
+                <h1>Different types of obsolescence</h1>
+                Obsolescence can be broadly cateogorised into the following types: 
+                <table class="style1" style="width:100%">
+                  <tr>
+                    <th style="width:33%; text-align: center; font-size: var(--font-size-md)">Technological</th>
+                    <th style="width:33%; text-align: center; font-size: var(--font-size-md)">Logistical</th>
+                    <th style="width:33%; text-align: center; font-size: var(--font-size-md)">Functional</th>
+                  </tr>
+                  <tr>
+                      <td>More technologically advanced components become available leading to diminishing supply of the older parts which might still be available in the inventory. </td>
+                      <td>No longer able to procure/manufacture constituent components to support the asset. This can be gradual or sudden depending on the supply chain and might not necessarily be due to technological obsolescence.  </td>
+                      <td>The component still operates as intended and can still be manufactured and supported, but the specific requirements for the component's function might have changed.</td>
+                  </tr>
+                  <tr>
+                    <td>For e.g. it will be hard to find carburetors for older automobiles since fuel injection technology has replaced them while performing the same function</td>
+                    <td>For e.g. when a manufacturer goes bankrupt and a like-for-like replacement is not available in the market. </td>
+                    <td>For e.g. Installation of USB2.0 ports for charging in passenger vehicles.</td>
+                </tr>
+
+              </table>                              
+                
+                <p>Cases often fall under multiple types since reaching a specific kind of obsolescence could accelerate another kind. For e.g. it is only a matter of time for technological obsolescence to result in logistical obsolescence in consumer electronics. Depending on the type, various strategies for obsolescence management can be devised.</p>
+                
+                <p>Planned obsolescence however should not be confused within this classification. As the name suggests it is<em> not really intended</em> to be managed by the manufacturer in the first place. </p>
+
+                <blockquote class="quote">
+                  <p><span><i class="ri-double-quotes-l"></i></span> Cases often fall under multiple types since reaching a specific kind of obsolescence could accelerate another kind. <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>  
+                
+                <h2>Useful life & End of life (EOL)</h2>
+
+                <figure class="style1">
+                  <img src="./assets/post-002-fig-2.svg" alt="IQT workflow" style="width:65%">
+                  <figcaption><b>Figure:</b> Reliability bathtub curve</figcaption>
+                </figure>
+ 
+                 <p> A good indicator of whether the asset is headed towards obsolescence is by evaluating its remaining useful life. This is illustrated by the reliability 'bathtub' curve in the figure. While the horizontal axis depicts duration of operation, the vertical axis depicts the failure rate. It is desired that the asset stays in the 'useful life phase' as much as possible where
+                 <ul class="disc">
+                       <li> the failure rate is minimum and fairly constant </li>
+                       <li> planned periodic maintenance is mostly enough to keep the asset functioning</li>
+                       <li> component replacements are readily available in the market in the near future
+                      <li>  asset utilisation is high
+                 </ul>
+
+
+                 <blockquote class="quote">
+                  <p><span><i class="ri-double-quotes-l"></i></span> A good indicator of whether the asset is headed towards obsolescence is by evaluating its remaining useful life. <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>  
+
+
+                <p>As the asset reaches its 'end of life', failure rate increases, and require substantial efforts to keep it running. In this 'wear and tear' phase, components that maket the asset too start running out and exacerbate the problem. Therefore, the fundamental guiding principle is  to keep managing obsolescence within an acceptable level of reliability to prolong its useful life.</p>
+
+                <h2>Why does obsolescence management matter?</h2>
+
+                <figure class="style1">
+                  <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+                  <figcaption> <b>Figure:</b> Estimated operational life vs Cost at purchase/installation of Assets. Determined from publically available data </figcaption>
+                </figure>
+
+                <p>In the figure above, I have mapped various assets from a mobile phone to a nuclear reactor with their initial cost of installation/purchase (on a logarithmic scale), and the expected operational life in years. Costs might vary within an order of magnitude depending on different specifications. The figures here only cover the initial fixed costs and do not cover maintenance or operational costs over its lifecycle. The operational life does not account for life extension activities either. </p>
+
+                <blockquote class="quote">
+                  <p><span><i class="ri-double-quotes-l"></i></span> ..unless the obsolescence is managed, the asset will not be utilised to its maximum value. <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>  
+
+                <p>Smaller assets such as consumer electronics can be replaced after a certain point. Large and complex assets are however costly and come with longer lifecycles. They are composed of smaller subsystems and components that might individually have a much shorter lifecycle compared to the asset itself. Therefore unless the obsolescence is managed, the asset will not be utilised to its maximum value. This forms the core premise for obsolescence management as a practice in sectors that manage large and complex assets.</p> 
+
+                <p> The product sectors of military and aerospace industries, medical technology, automotive industries, telecommunication industries, and nuclear energy industries are the most affected by obsolescence. </p>
+
+                <p>In the next blogpost I intend to discuss the different approaches to tackle obsolescence based on standards. </p>
+
+                <hr class="style2">
+                
+                              
+                <h3>Some useful reading</h3>
+                <ol>
+                  <li>IEC 62402:2007 Obsolescence management - Application guide (Accepted as EN standard)</li>
+                  <li>BS 7000-5:2001 Design management systems — Part 5: Guide to managing obsolescence</li>
+                  <li>NR‑T‑3.34 IAEA Nuclear Energy Series - Management of Ageing and Obsolescence of Instrumentation and Control Systems and Equipment in Nuclear Power Plants and Related Facilities Through Modernization</li>
+                  <li>Strategies to the Prediction, Mitigation and Management of Product Obsolescence (Wiley) </li>
+                </ol>
+
+                <hr class="style2">
+                <p style="text-align:center; font-size: 30px;"> &#69687; </p>
+
+                <!--<p style="text-align:center; font-size: 30px;"> &#69685; </p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG EDIT ENDS HERE -->
+
+    <!-- Footer -->
+      <footer class="footer section">
+
+          <div class="footer-container container d-grid">
+
+              <div class="company-data" id="contact-section">
+                  <h2> Contact: </h2>
+                  <p class="company-description">Feel free to reach out to me via the handles listed below.</p>
+                  <ul class="list social-media">
+                      <li class="list-item">
+                          <a href="https://www.linkedin.com/in/visakhvkrishna" class="list-link"><i class="ri-linkedin-fill"></i></a>
+                      </li>
+                      <li class="list-item">
+                          <a href="https://twitter.com/visakh_vkrishna" class="list-link"><i class="ri-twitter-line"></i></a>
+                      </li>
+                      <li class="list-item">
+                          <a href="https://medium.com/@visakhkrishna" class="list-link"><i class="ri-medium-line"></i></a>
+                      </li>
+                      <li class="list-item">
+                        <a href=mailto:"vkrishna.visakh@gmail.com" class="list-link"><i class="ri-mail-line"></i></a>
+                      </li>
+                  </ul>
+                  <span class="copyright-notice">&copy;2023 Visakh Krishna. All rights reserved.</span>
+              </div>
+
+              <div>
+
+              </div>
+
+              <div>
+
+              </div>
+          </div>
+      </footer>
+
+      <!-- Swiper.js -->
+      <script src="../assets/js/swiper-bundle.min.js"></script>
+      <!-- Custom script -->
+      <script src="../assets/js/main.js"></script>
+  </body>
+  </html>
