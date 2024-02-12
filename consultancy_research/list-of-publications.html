@@ -1,0 +1,298 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visakh Krishna | Obsolescence management I</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.jpg">
+  <!-- Remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Swiper.js styles -->
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <meta property="og:title" content="List of publications" />
+  <meta property="og:type" content="Blog post" />
+  <meta property="og:url" content="https://visakhkrishna.github.io/consultancy_research/post-002-obsolescence-management.html" />
+  <meta property="og:image" content="https://visakhkrishna.github.io/consultancy_research/assets/post-002-fig-1.jpeg" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="obsolescence-management-i" />
+  <meta property="og:description" content="An introduction to obsolescence management" />
+  <style>
+      table.style1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: var(--font-size-llsm);
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        vertical-align: top;
+      }
+  </style>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawSeriesChart);
+
+  function drawSeriesChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Asset','Installation cost',	'Operational life in years','Class','Unit'],
+      ['Hydropower-dams (>700 MW)', 5e9,100, 'Energy',5],
+      ['Nuclear reactor',1e10,50,'Energy',5],
+      ['Goods wagon',2e5,40,'Rolling stock',5],
+      ['Electric loco.',5e6,35,'Rolling stock',5],
+      ['Metro trainset',1e7,40, 'Rolling stock',5],
+      ['Highspeed trainset',5e7,35, 'Rolling stock',5],
+      ['Fighter jets',1e8,30, 'Aeronautical',5],
+      ['Diesel loco.',3e6,25, 'Rolling stock',5],
+      ['Commercial aircraft',2e8,25, 'Aeronautical',5],
+      ['Trucks',2e5,20,	'Road transport',5],
+      ['Passenger bus',3e5,15, 'Road transport',5],
+      ['ICE car',3e4,12, 'Road transport',5],
+      ['TV',3e3,8, 'Consumer electronics',5],
+      ['Laptop',2e3,4, 'Consumer electronics',5],
+      ['Mobile phone',8e2,3, 'Consumer electronics',5],
+      ['Container ships',1e8,28, 'Water transport',5]
+    ]);
+
+    var options = {
+      hAxis: {title: 'Installation cost of asset in $',  minValue:1, logScale: true},
+      legend:{},
+      vAxis: {title: 'Average operational life in years'},
+      chartArea:{left:50,top:50,width:'70%',height:'80%',backgroundColor:'#F2F2F2'},
+      backgroundColor:{fill:'#F2F2F2', stroke: '#00000',strokeWidth: 3},
+      height: '100%',
+      width: '80%',
+      bubble: {textStyle: {fontSize: 9}, opacity: .5},
+      fontName:'Roboto Slab'
+    };
+
+    var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+    chart.draw(data, options);
+  }
+  </script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+
+      <nav class="navbar container">
+          <a href="../index.html">
+            <h2 class="logo">   <img src="../assets/images/logo_.svg" alt="" height="50"> </h2>
+          </a>
+
+          <div class="menu" id="menu">
+              <ul class="list">
+                  <li class="list-item">
+                      <a href="../index.html" class="list-link">HOME</a>
+                  </li>
+                  <li class="list-item">
+                      <a href="../consultancy_research/index.html" class="list-link">CONSULTANCY & RESEARCH</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="../book_reviews/index.html" class="list-link">BLOG</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="../about.html" class="list-link">ABOUT</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#contact-section" class="list-link">CONTACT</a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="list list-right">
+              <button class="btn place-items-center" id="theme-toggle-btn">
+                  <i class="ri-sun-line sun-icon"></i>
+                  <i class="ri-moon-line moon-icon"></i>
+              </button>
+
+              <button class="btn place-items-center" id="search-icon">
+                  <i class="ri-search-line"></i>
+              </button>
+
+              <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                  <i class="ri-menu-3-line open-menu-icon"></i>
+                  <i class="ri-close-line close-menu-icon"></i>
+              </button>
+          </div>
+
+      </nav>
+
+  </header>
+
+    <!-- Search -->
+    <div class="search-form-container container" id="search-form-container">
+        <div class="form-container">
+            <!--<form action="" class="form">
+                <input class="form-input" type="text" placeholder="What are you dlooking for?">
+                <button class="btn form-btn icon-box" type="submit">
+                    <i class="ri-search-line"></i>
+                </button>
+            </form> -->
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" class="form-input">
+                <button>
+                  <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                </button>
+              </form>
+              <!-- <script>
+                const f = document.getElementById('form');
+                const q = document.getElementById('query');
+                const google = 'https://www.google.com/search?q=site%3A+';
+                const site = 'visakhkrishna.github.io';
+
+                function submitted(event) {
+                  event.preventDefault();
+                  const url = google + site + '+' + q.value;
+                  const win = window.open(url, '_blank');
+                  win.focus();
+                }
+
+                f.addEventListener('submit', submitted);
+              </script> -->
+            <span class="form-note">Or press ESC to close.</span>
+        </div>
+        <div class="btn form-close-btn icon-box place-items-center" id="form-close-btn">
+            <i class="ri-close-line"></i>
+        </div>
+    </div>
+
+<!-- BLOG EDIT STARTS HERE&#3024;  -->
+
+    <section class="blog-post section-header-offset">
+        <div class="blog-post-container container">
+            <div class="blog-post-data">
+                <h3 class="title blog-post-title">Publications</h3>
+            </div>
+
+            <div class="container">
+
+                <p>In this page I list all my publications with links to the full-text available at the publisher's website. If you are not able to access certain papers, please reach out to me for a pre-print version.</p>
+
+                <!--
+                <figure class="style1">
+                  <img src="./assets/post-002-fig-1.png" alt="IQT app" style="width:100%">
+                  <figcaption></figcaption>
+                </figure>
+                -->
+
+                <h1> Journal articles</h1>
+                <ol>
+                    <li> H-Nia S, et al., (2023). Simulation-based evaluation of maintenance strategies from a life cycle cost perspective. <em>Wear</em>, 532–533:205120.</li>
+
+                    <li> Krishna V V., et al., (2022). Long freight trains & long-term rail surface damage–a systems perspective. <em>Vehicle System Dynamics</em>,  61:1500–1523.</li>
+
+                    <li> Stichel, S., Bergstrand J., Krishna, V. V. (2022).Track-friendly running gear and possibilities for computer aided wheel and rail maintenance planning – Results from Shift2Rail projects FR8RAIL I-IV. <em>ZEVRail</em>, 146 </li>
+
+                    <li> Krishna V V., et al., (2022). Rail RCF damage quantification and comparison for different damage models. <em>Railway Engineering Science</em>, 30:23–40. </li>
+
+                    <li> Krishna, V. V., Hossein Nia, S., Casanueva, C. & Stichel, S. (2020). Long term rail surface damage considering maintenance interventions. <em>Wear</em>, 460.</li>
+
+                    <li> Krishna, V. V., Jobstfinke, D., Melzi, S. & Berg, M. (2020). An integrated numerical framework to investigate the running safety of overlong freight trains. <em>Proceedings of the Institution of mechanical engineers. Part F, journal of rail and rapid transit</em>, 235(1),47-60.</li>
+
+                    <li> Six, K., et al., (2019). Assessment of running gear performance in relation to rolling contact fatigue of wheels and rails based on stochastic simulations. <em>Proceedings of the Institution of mechanical engineers. Part F, journal of rail and rapid transit</em>, 234(4), 405-416.</li>
+
+                    <li> Krishna, V. V., Berg, M. & Stichel, S. (2019). Tolerable longitudinal forces for freight trains in tight S-curves using three-dimensional multi-body simulations. <em>Proceedings of the Institution of mechanical engineers. Part F, journal of rail and rapid transit</em>, 234(5), 454-467.</li>
+
+                    <li> Casanueva, C., Krishna, V. V., Jönsson, R. & Nelldal, B. L. (2016). Payload optimization of articulated wagons considering train length and vehicle dynamic behaviour. <em>Civil-Comp Proceedings</em>, 110.</li>
+
+                </ol>
+
+                <h1> Conference papers</h1>
+                <ol>
+                    <li> S. Hossein Nia et al., (2022). Simulation-based evaluation of maintenance strategies from a Life Cycle Cost perspective. In: CM 2022 12th <em>International Conference on Contact Mechanics and Wear of Rail/Wheel Systems</em>, Conference Proceedings, 2022, pp. 258-265.</li>
+
+                    <li> Krishna, V. V., et.al.,(2022). Long freight trains & Long-term rail surface damage: Towards digital twins that enable predictive maintenance of track. In <em>World Congress of Railway Research</em>, Birmingham.</li>
+
+                    <li> Casanueva, Carlos Stichel S. (2021). System-wide impact of vehicle innovations: Evaluating track-friendliness during vehicle design. In <em>Resource Efficient Vehicles Conference</em>, Stockholm.</li>
+
+                    <li>Krishna, V. V., Hossein Nia, S., Stichel, S. (2021). Rail RCF damage quantification: How do diverse approaches compare against one another? In: <em>Proc 27th Int Assoc Veh Syst Dyn.</em>: St.Petersburg.</li>
+
+                    <li> Krishna, V. V., Hossein Nia, S., Casanueva, C., Stichel, S. (2021). Evolution of wheel-rail kinematic coupling due to RCF and natural & maintenance-induced wear using vehicle dynamic simulations. In Proceeedings of the <em>25th International Congress of Theoretical and Applied Mechanics</em> (25th ICTAM). Milan.</li>
+
+                    <li> Krishna V V, Casanueva C, Hossein-Nia S, Stichel S. 2019. FR8RAIL Y25 running gear for high tonnage and speed. In:  <em>Proc 12th Int Heavy Haul Assoc IHHA.</em> Narvik; p. 690–697.</li>
+
+                    <li> Krishna V V, Hossein-Nia S, Stichel S. 2019. New methodology to estimate costs caused by rail wear and RCF depending on the type of running gear. In: <em>Proc 26th Int Assoc Veh Syst Dyn.</em> Gothenburg.</li>
+
+                    <li> Pàlinkò, M., et.al., (2019). Evaluation of passive and mechatronic steering systems for three-axle locomotive bogies by means of multibody simulations. In Proceedings of the <em>11th International conference on railway bogies and running gears</em>, Budapest.</li>
+
+                    <li> Six, K., Mihalj, T., Trummer, G., Marte, C., Krishna, V. V., Hossein Nia, S., Stichel, S. (2018). Assessment of running gears regarding rolling contact fatigue of wheels and rails based on stochastic simulations. In Proceedings of the <em>11th International Conference on Contact Mechanics and Wear of Rail/wheel Systems</em>, CM 2018. (pp. 878-885). TU Delft.</li>
+
+                    <li> Krishna, V. V., Berg, M., Stichel, S. (2017). Longitudinal Train Dynamics for Freight Wagons passing through an S-curve. In Proceedings of the <em>First International Railway Symposium Aachen</em> (IRSA). (pp. 193-203).</li>
+
+                </ol>
+
+                <h1>PhD Thesis</h1>
+                <h4>Long freight trains & Long-term rail surface damage</h4>
+                <iframe src="https://drive.google.com/file/d/1KTyTHv_v3if25mxf25EWIzxFYAURNsqG/preview" width="100%" height="600" allow="autoplay"></iframe>
+               
+                <h1>Other reports & Deliverables</h1>
+                <ol>
+                  <li> FR8RAIL</li>
+
+                  <li> DYNAFREIGHT</li>
+
+                  <li> Casanueva, Carlos Stichel S. (2021). System-wide impact of vehicle innovations: Evaluating track-friendliness during vehicle design. In <em>Resource Efficient Vehicles Conference</em>, Stockholm.</li>
+                </ol>              
+            
+
+                <hr class="style2">
+                <p style="text-align:center; font-size: 30px;"> &#69684; </p>
+
+                <!--<p style="text-align:center; font-size: 30px;"> &#69685; </p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG EDIT ENDS HERE -->
+
+    <!-- Footer -->
+      <footer class="footer section">
+
+          <div class="footer-container container d-grid">
+
+              <div class="company-data" id="contact-section">
+                  <h2> Contact: </h2>
+                  <p class="company-description">Feel free to reach out to me via the handles listed below.</p>
+                  <ul class="list social-media">
+                      <li class="list-item">
+                          <a href="https://www.linkedin.com/in/visakhvkrishna" class="list-link"><i class="ri-linkedin-fill"></i></a>
+                      </li>
+                      <li class="list-item">
+                          <a href="https://twitter.com/visakh_vkrishna" class="list-link"><i class="ri-twitter-line"></i></a>
+                      </li>
+                      <li class="list-item">
+                          <a href="https://medium.com/@visakhkrishna" class="list-link"><i class="ri-medium-line"></i></a>
+                      </li>
+                      <li class="list-item">
+                        <a href=mailto:"vkrishna.visakh@gmail.com" class="list-link"><i class="ri-mail-line"></i></a>
+                      </li>
+                  </ul>
+                  <span class="copyright-notice">&copy;2023 Visakh Krishna. All rights reserved.</span>
+              </div>
+
+              <div>
+
+              </div>
+
+              <div>
+
+              </div>
+          </div>
+      </footer>
+
+      <!-- Swiper.js -->
+      <script src="../assets/js/swiper-bundle.min.js"></script>
+      <!-- Custom script -->
+      <script src="../assets/js/main.js"></script>
+  </body>
+  </html>
