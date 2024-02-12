@@ -1013,3 +1013,8 @@ figure.style1 {
   padding: 0.5em;
   align-self: center;
 }
+
+a.one:link {
+    text-decoration: underline;
+
+  }
