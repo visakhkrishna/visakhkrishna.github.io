@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visakh Krishna | Derailment risks for radio-controlled freight locomotives</title>
+  <title>Visakh Krishna | Evaluation of novel freight bogie design</title>
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.jpg">
   <!-- Remix icons -->
@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
   <!-- Custom styles -->
   <link rel="stylesheet" href="../assets/css/main.css">
-  <meta property="og:title" content="Derailment risks for radio-controlled freight locomotives" />
+  <meta property="og:title" content="Evaluation of novel freight bogie design" />
   <meta property="og:type" content="Blog post" />
-  <meta property="og:url" content="https://visakhkrishna.github.io/consultancy_research/post-004-derailment-risks-locomotives.html" />
-  <meta property="og:image" content="https://visakhkrishna.github.io/consultancy_research/assets/post-004-fig-1.jpg" />
+  <meta property="og:url" content="https://visakhkrishna.github.io/consultancy_research/post-006-fr8rail-bogie.html" />
+  <meta property="og:image" content="https://visakhkrishna.github.io/consultancy_research/assets/post-006-fig-1.png" />
   <meta property="og:image:width" content="400" />
   <meta property="og:image:height" content="300" />
   <meta property="og:image:alt" content="derailment-risks" />
@@ -35,50 +35,7 @@
         vertical-align: top;
       }
   </style>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawSeriesChart);
-
-  function drawSeriesChart() {
-
-    var data = google.visualization.arrayToDataTable([
-      ['Asset','Installation cost',	'Operational life in years','Class','Unit'],
-      ['Hydropower-dams (>700 MW)', 5e9,100, 'Energy',5],
-      ['Nuclear reactor',1e10,50,'Energy',5],
-      ['Goods wagon',2e5,40,'Rolling stock',5],
-      ['Electric loco.',5e6,35,'Rolling stock',5],
-      ['Metro trainset',1e7,40, 'Rolling stock',5],
-      ['Highspeed trainset',5e7,35, 'Rolling stock',5],
-      ['Fighter jets',1e8,30, 'Aeronautical',5],
-      ['Diesel loco.',3e6,25, 'Rolling stock',5],
-      ['Commercial aircraft',2e8,25, 'Aeronautical',5],
-      ['Trucks',2e5,20,	'Road transport',5],
-      ['Passenger bus',3e5,15, 'Road transport',5],
-      ['ICE car',3e4,12, 'Road transport',5],
-      ['TV',3e3,8, 'Consumer electronics',5],
-      ['Laptop',2e3,4, 'Consumer electronics',5],
-      ['Mobile phone',8e2,3, 'Consumer electronics',5],
-      ['Container ships',1e8,28, 'Water transport',5]
-    ]);
-
-    var options = {
-      hAxis: {title: 'Installation cost of asset in $',  minValue:1, logScale: true},
-      legend:{},
-      vAxis: {title: 'Average operational life in years'},
-      chartArea:{left:50,top:50,width:'70%',height:'80%',backgroundColor:'#F2F2F2'},
-      backgroundColor:{fill:'#F2F2F2', stroke: '#00000',strokeWidth: 3},
-      height: '100%',
-      width: '80%',
-      bubble: {textStyle: {fontSize: 9}, opacity: .5},
-      fontName:'Roboto Slab'
-    };
-
-    var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
-    chart.draw(data, options);
-  }
-  </script>
-
+ 
 </head>
 <body>
   <!-- Header -->
@@ -172,82 +129,80 @@
         <div class="blog-post-container container">
             <div class="blog-post-data">
 
-                <h3 class="title blog-post-title">Derailment risks for radio-controlled freight locomotives</h3>
-                <h4 class="title blog-post-subtitle">Guidelines for the introduction of long freight trains with radio-controlled locomotives in the German railway network</h4>
+                <h3 class="title blog-post-title">Evaluation of novel freight bogie design</h3>
+                <h4 class="title blog-post-subtitle">EN14363 tests for dynamic behaviour of the FR8RAIL variant of the Y25 bogie with cross links and a modified suspension</h4>
 
                 <div class="article-data">
                     <span>Jan 8th 2024</span>
                     <span class="article-data-spacer"></span>
-                    <span>4 Min read</span>
+                    <span>2 Min read</span>
                 </div>
-
-                <img src="./assets/post-004-fig-1.jpg" alt="" width="1000">
-
-
             </div>
 
             <div class="container">
 
-                <p>An overview of my contribution in the DYNAFREIGHT project in the Shift2Rail initiative.</p>
+                <figure class="style1">
+                    <img src="./assets/post-006-fig-1.png" alt="LTD" style="width:70%">
+                    <figcaption><b>Figure:</b> FR8RAIL bogie</figcaption>
+                </figure>
+
+                <p>An overview of my contribution in the running behaviour analysis of cross-bracing links for a standard freight bogie design.</p>
 
                 <h1>Background</h1>
-                <p>Robust operation of heavier and longer freight trains is essential to move towards increasing the competitiveness of rail transportation. From a European perspective, this typically means running long freight trains (>800 m). This shorter length for 'long' trains in Europe compared to the rest of the world that routinely operates 2-4 km long trains is due to various factors which was explored extensively in this project. There are technical challenges such as, 
-                <ul class="disc">
-                    <li>prevalence of traditional pneumatic (P-type) braking systems</li>
-                    <li>side buffers & screw-coupling systems</li>
-                    <li>lack of long sidings</li>
-                    <li>tight curves</li>
-                </ul>
-                Also, from an operational standpoint, it is desirable to have multiple radio-controlled locomotives in long trains that can be controlled by the driver from the lead locomotive. This means it is important to also consider the worst case scenario when communication between locomotives fail or get delayed. Therefore, fail-safe protocols needed to be built into the radio-controlled pneumatic braking system. 
+                <p> There is a need to develop more advanced freight wagons that maximise payload and speed, while reducing the overall system costs, including wheelset and track deterioration. In the Shift2Rail project FR8RAIL, a consortium of wagon manufacturers, wheelset manufacturers, and research centres worked to develop a new generation of the widely used Y25 freight running gear, by improving the curving performance and hunting stability. For the new design, I studied the dynamic behaviour with simulations-based EN14363 tests up to 30 tons/axle, and calculated the expected impact on wheel wear and fatigue.</p>
 
                 <blockquote class="quote">
-                    <p><span><i class="ri-double-quotes-l"></i></span> .. from an operational standpoint, it is desirable to have multiple radio-controlled locomotives in long trains that can be controlled by the driver from the lead locomotive  <span><i class="ri-double-quotes-r"></i></span></p>
+                    <p><span><i class="ri-double-quotes-l"></i></span> .. studied the dynamic behaviour with simulations-based EN14363 tests up to 30 tons/axle, and calculated the expected impact on wheel wear and fatigue. <span><i class="ri-double-quotes-r"></i></span></p>
                 </blockquote>  
-                
-                In this project, I studied the derailment risks of radio-controlled braking in infrastructure bottlenecks, and guidelines for building long trains with the corresponding tolerable forces respectively. A successful demonstrator of a long train in 2020 in the German railway network was done in 2020.</p>
-
-                <h1>Derailment risks in infrastructure bottlenecks</h1>
-                Longitudinal Train Dynamics (LTD) and its influence on running safety of freight trains is a key issue when it negotiates tight switch curves. Standards such as the UIC Code 530-2 and EN-15839 detail the procedure for on-track propelling tests that should be conducted to determine the running safety of a single wagon that consider tight S-curves, neighbouring wagons and buffers. 
+               
+                <h1>FR8RAIL bogie design</h1>
+                The design and construction of the Y25 bogie design and the new FR8RAIL variant are described in detail in citer. The designing principle of the FR8RAIL bogie revolves around the much needed balance between lateral stability at higher speeds and steering capability in tight curves. From a track-friendliness standpoint, better curving performance translates to lower track damage in curves while better lateral stability pushes the operating envelope of the freight wagons to higher speeds without causing excessive damage to the track. The key features in the suspension that distinguish the running gears from each other are:
 
                 <figure class="style1">
-                    <img src="./assets/post-004-fig-2.png" alt="LTD" style="width:80%">
-                    <figcaption><b>Figure:</b> Simulations to study derailment risks at infrastructure bottlenecks</figcaption>
+                    <img src="./assets/post-006-fig-2.png" alt="LTD" style="width:100%">
+                    <figcaption><b>Figure:</b> Comparison of bogie designs</figcaption>
                 </figure>
-                
-                <p>A three-dimensional multi-body simulations-based approach was developed to judge the derailment risk of a train with regards to its longitudinal dynamic behaviour. The derailment risk is expressed as Longitudinal Compressive Force (LCF) limits & Track forces for wagon combinations passing through S-curves of varying curvatures.</p>
+
+                <ol>
+                    <h3><li>Cross-bracing linkages</h3>
+                        This helps with radial steering along curved track sections, decreasing the wheel-rail forces by reducing the angle of attack. The linkages weigh 35 kg each, slightly increasing the unsprung mass that also influence the dynamic loading on the track. Such linkages have been implemented before in three-piece bogie designs.</li>
+                    <h3><li>Softer primary suspension</h3> 
+                        Due to the presence of an extra Lenoir link per wheel, doubling the longitudinal clearance to 8 mm. This substantially increases the capability of the vehicle to yaw.</li>
+                    <h3><li>No sidebearer clearance</h3> 
+                        Unlike the previous features, this stiffens the secondary suspension allowing for lesser relative movement between the carbody and the bogie-frame. However, this is beneficial when it comes to lateral stability at high running speeds.</li>
+                </ol>
+
+                The bogie is also lighter when compared to the standard variant by about 100 kg due to variations in design and materials. It is also equipped with disc-brakes instead of conventional tread block braking.
 
                 <blockquote class="quote">
-                    <p><span><i class="ri-double-quotes-l"></i></span> The derailment risk is expressed as Longitudinal Compressive Force (LCF) limits & Track forces for wagon combinations passing through S-curves of varying curvatures. <span><i class="ri-double-quotes-r"></i></span></p>
+                    <p><span><i class="ri-double-quotes-l"></i></span> The designing principle of the FR8RAIL bogie revolves around the much needed balance between lateral stability at higher speeds and steering capability in tight curves. <span><i class="ri-double-quotes-r"></i></span></p>
                 </blockquote>  
 
+               
 
-                <h1>Guidelines for building long freight trains</h1>
-                Long freight trains can have several wagons and multiple locomotives along its length. In addition to braking, the distribution of payload can affect the wagon dynamics and therefore certain combinations need to be avoided. Based on the derailment risks calculated at infrastructure bottlenecks, critical train configurations and braking scenarios were identified and tested on track. It consisted of:
+                <h1>Running behaviour & Track-friendliness</h1>
+
+                <p>The assessment quantities given in EN14363 standards for the corresponding running conditions were checked to evaluate the running behaviour.The vehicle performance was assessed based on safety against derailment on twisted track, running safety at high speeds, track loading and ride comfort. The track-friendliness based on different damage modes namely 
                 <ul class="disc">
-                    <li>empty wagons placed between loaded wagons</li>
-                    <li>Flat wagons with low torsional flexibility placed in between rigid and shorter coal wagons</li>
-                    <li>Testing the emergency braking protocol when radio communication between locomotives fail</li>
-                </ul>
-                The test with mixed train configuration with three locomotives (two remotely controlled) was carried out in 2021 in Germany to demonstrate the feasibility to operate radio-controlled long freight trains.  
+                    <li>Wear,</li>
+                    <li>Rolling Contact Fatigue (RCF), </li>
+                    <li>Settlement,</li>
+                    <li> and component fatigue</li>
+                </ul>was also evaluated as seen in the figure below. 
 
-                <blockquote class="quote">
-                    <p><span><i class="ri-double-quotes-l"></i></span> critical train configurations and braking scenarios were identified and tested on track<span><i class="ri-double-quotes-r"></i></span></p>
-                </blockquote> 
+                 <figure class="style1">
+                    <img src="./assets/post-006-fig-3.png" alt="LTD" style="width:50%">
+                    <figcaption><b>Figure:</b> Evaluation of track-friendliness</figcaption>
+                </figure>
 
-                <p>More detailed description of the project, methodologies, and tools used can be found in the references below.</p>
-                <!-- Videos -->
-                <h4>Distributed Power System demonstrator with mixed train configuration</h4>
-                <iframe width="device-width" height="500" src="https://www.youtube.com/embed/mkSjDUTNVUw?si=P5ip2Tyrw9fEy4bi"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+                The full evaluation is published in the project report and articles below.
+                 
                 <h1>References</h1>
 
                 <ol>
-                    <li>Press release: <a  class="one" href="https://www.dbcargo.com/rail-de-en/logistics-news/dps-distributed-power-system-the-way-to-the-long-train-6224036"> DPS: Distributed Power System, the way to the long train</a>, DB Cargo.</li>
-                    <li>  Project report: <a  class="one" href="https://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Akth%3Adiva-261377" >Deliverable 3.2: Safety precautions in train configuration and brake application.</a></li>
-                    <li>  Journal article: <a  class="one" href="https://doi.org/10.1177/0954409719841794" >Tolerable longitudinal forces for freight trains in tight S-curves using three-dimensional multi-body simulations.</a> </li>
-                    <li>  Journal article: <a  class="one" href="https://doi.org/10.1177/0954409720905203" >An integrated numerical framework to investigate the running safety of overlong freight trains.</a> </li>
-                    <li>Website: <a  class="one" href="http://www.dynafreight-rail.eu/" >DYNAFREIGHT</a></li>
-
+                    <li>  Project report:<a  class="one" href="https://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Akth%3Adiva-271634" >FR8RAIL: Deliverable 4.3</a> Preliminary running gear and wagon design concepts.</li>
+                    <li>  Conference paper: <a  class="one" href="https://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Akth%3Adiva-255024" >FR8RAIL Y25 running gear for high tonnage and speed.</a> International Heavy Haul Association.</li>
+                    <li>  Journal article: <a  class="one" href="https://doi.org/10.1177/0954409719879600" >Assessment of running gear performance in relation to rolling contact fatigue of wheels and rails based on stochastic simulations.</a>.</li>
                 </ol>
        
                 <hr class="style2">
