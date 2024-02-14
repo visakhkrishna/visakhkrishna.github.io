@@ -1,0 +1,303 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visakh Krishna | Derailment risks for radio-controlled freight locomotives</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo.jpg">
+  <!-- Remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Swiper.js styles -->
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css"/>
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <meta property="og:title" content="Derailment risks for radio-controlled freight locomotives" />
+  <meta property="og:type" content="Blog post" />
+  <meta property="og:url" content="https://visakhkrishna.github.io/consultancy_research/post-004-derailment-risks-locomotives.html" />
+  <meta property="og:image" content="https://visakhkrishna.github.io/consultancy_research/assets/post-004-fig-1.jpg" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt" content="derailment-risks" />
+  <meta property="og:description" content="guidelines" />
+  <style>
+      table.style1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: var(--font-size-llsm);
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        vertical-align: top;
+      }
+  </style>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawSeriesChart);
+
+  function drawSeriesChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Asset','Installation cost',	'Operational life in years','Class','Unit'],
+      ['Hydropower-dams (>700 MW)', 5e9,100, 'Energy',5],
+      ['Nuclear reactor',1e10,50,'Energy',5],
+      ['Goods wagon',2e5,40,'Rolling stock',5],
+      ['Electric loco.',5e6,35,'Rolling stock',5],
+      ['Metro trainset',1e7,40, 'Rolling stock',5],
+      ['Highspeed trainset',5e7,35, 'Rolling stock',5],
+      ['Fighter jets',1e8,30, 'Aeronautical',5],
+      ['Diesel loco.',3e6,25, 'Rolling stock',5],
+      ['Commercial aircraft',2e8,25, 'Aeronautical',5],
+      ['Trucks',2e5,20,	'Road transport',5],
+      ['Passenger bus',3e5,15, 'Road transport',5],
+      ['ICE car',3e4,12, 'Road transport',5],
+      ['TV',3e3,8, 'Consumer electronics',5],
+      ['Laptop',2e3,4, 'Consumer electronics',5],
+      ['Mobile phone',8e2,3, 'Consumer electronics',5],
+      ['Container ships',1e8,28, 'Water transport',5]
+    ]);
+
+    var options = {
+      hAxis: {title: 'Installation cost of asset in $',  minValue:1, logScale: true},
+      legend:{},
+      vAxis: {title: 'Average operational life in years'},
+      chartArea:{left:50,top:50,width:'70%',height:'80%',backgroundColor:'#F2F2F2'},
+      backgroundColor:{fill:'#F2F2F2', stroke: '#00000',strokeWidth: 3},
+      height: '100%',
+      width: '80%',
+      bubble: {textStyle: {fontSize: 9}, opacity: .5},
+      fontName:'Roboto Slab'
+    };
+
+    var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+    chart.draw(data, options);
+  }
+  </script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+
+      <nav class="navbar container">
+          <a href="../index.html">
+            <h2 class="logo">   <img src="../assets/images/logo_.svg" alt="" height="50"> </h2>
+          </a>
+
+          <div class="menu" id="menu">
+              <ul class="list">
+                  <li class="list-item">
+                      <a href="../index.html" class="list-link">HOME</a>
+                  </li>
+                  <li class="list-item">
+                      <a href="../consultancy_research/index.html" class="list-link">CONSULTANCY & RESEARCH</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="../book_reviews/index.html" class="list-link">BLOG</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="../about.html" class="list-link">ABOUT</a>
+                  </li>
+                  <li class="list-item">
+                    <a href="#contact-section" class="list-link">CONTACT</a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="list list-right">
+              <button class="btn place-items-center" id="theme-toggle-btn">
+                  <i class="ri-sun-line sun-icon"></i>
+                  <i class="ri-moon-line moon-icon"></i>
+              </button>
+
+              <button class="btn place-items-center" id="search-icon">
+                  <i class="ri-search-line"></i>
+              </button>
+
+              <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
+                  <i class="ri-menu-3-line open-menu-icon"></i>
+                  <i class="ri-close-line close-menu-icon"></i>
+              </button>
+          </div>
+
+      </nav>
+
+  </header>
+
+    <!-- Search -->
+    <div class="search-form-container container" id="search-form-container">
+        <div class="form-container">
+            <!--<form action="" class="form">
+                <input class="form-input" type="text" placeholder="What are you dlooking for?">
+                <button class="btn form-btn icon-box" type="submit">
+                    <i class="ri-search-line"></i>
+                </button>
+            </form> -->
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content" class="form-input">
+                <button>
+                  <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                </button>
+              </form>
+              <!-- <script>
+                const f = document.getElementById('form');
+                const q = document.getElementById('query');
+                const google = 'https://www.google.com/search?q=site%3A+';
+                const site = 'visakhkrishna.github.io';
+
+                function submitted(event) {
+                  event.preventDefault();
+                  const url = google + site + '+' + q.value;
+                  const win = window.open(url, '_blank');
+                  win.focus();
+                }
+
+                f.addEventListener('submit', submitted);
+              </script> -->
+            <span class="form-note">Or press ESC to close.</span>
+        </div>
+        <div class="btn form-close-btn icon-box place-items-center" id="form-close-btn">
+            <i class="ri-close-line"></i>
+        </div>
+    </div>
+
+<!-- BLOG EDIT STARTS HERE&#3024;  -->
+
+    <section class="blog-post section-header-offset">
+        <div class="blog-post-container container">
+            <div class="blog-post-data">
+
+                <h3 class="title blog-post-title">Derailment risks for radio-controlled freight locomotives</h3>
+                <h4 class="title blog-post-subtitle">Guidelines for the introduction of long freight trains with radio-controlled locomotives in the German railway network</h4>
+
+                <div class="article-data">
+                    <span>Jan 8th 2024</span>
+                    <span class="article-data-spacer"></span>
+                    <span>4 Min read</span>
+                </div>
+
+                <img src="./assets/post-004-fig-1.jpg" alt="" width="1000">
+
+
+            </div>
+
+            <div class="container">
+
+                <p>An overview of my contribution in the DYNAFREIGHT project in the Shift2Rail initiative.</p>
+
+                <h1>Background</h1>
+                <p>Robust operation of heavier and longer freight trains is essential to move towards increasing the competitiveness of rail transportation. From a European perspective, this typically means running long freight trains (>800 m). This shorter length for 'long' trains in Europe compared to the rest of the world that routinely operates 2-4 km long trains is due to various factors which was explored extensively in this project. There are technical challenges such as, 
+                <ul class="disc">
+                    <li>prevalence of traditional pneumatic (P-type) braking systems</li>
+                    <li>side buffers & screw-coupling systems</li>
+                    <li>lack of long sidings</li>
+                    <li>tight curves</li>
+                </ul>
+                Also, from an operational standpoint, it is desirable to have multiple radio-controlled locomotives in long trains that can be controlled by the driver from the lead locomotive. This means it is important to also consider the worst case scenario when communication between locomotives fail or get delayed. Therefore, fail-safe protocols needed to be built into the radio-controlled pneumatic braking system. 
+
+                <blockquote class="quote">
+                    <p><span><i class="ri-double-quotes-l"></i></span> .. from an operational standpoint, it is desirable to have multiple radio-controlled locomotives in long trains that can be controlled by the driver from the lead locomotive  <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>  
+                
+                In this project, I studied the derailment risks of radio-controlled braking in infrastructure bottlenecks, and guidelines for building long trains with the corresponding tolerable forces respectively. A successful demonstrator of a long train in 2020 in the German railway network was done in 2020.</p>
+
+                <h1>Derailment risks in infrastructure bottlenecks</h1>
+                Longitudinal Train Dynamics (LTD) and its influence on running safety of freight trains is a key issue when it negotiates tight switch curves. Standards such as the UIC Code 530-2 and EN-15839 detail the procedure for on-track propelling tests that should be conducted to determine the running safety of a single wagon that consider tight S-curves, neighbouring wagons and buffers. 
+
+                <figure class="style1">
+                    <img src="./assets/post-004-fig-2.png" alt="LTD" style="width:80%">
+                    <figcaption><b>Figure:</b> Simulations to study derailment risks at infrastructure bottlenecks</figcaption>
+                </figure>
+                
+                <p>A three-dimensional multi-body simulations-based approach was developed to judge the derailment risk of a train with regards to its longitudinal dynamic behaviour. The derailment risk is expressed as Longitudinal Compressive Force (LCF) limits & Track forces for wagon combinations passing through S-curves of varying curvatures.</p>
+
+                <blockquote class="quote">
+                    <p><span><i class="ri-double-quotes-l"></i></span> The derailment risk is expressed as Longitudinal Compressive Force (LCF) limits & Track forces for wagon combinations passing through S-curves of varying curvatures. <span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote>  
+
+
+                <h1>Guidelines for building long freight trains</h1>
+                Long freight trains can have several wagons and multiple locomotives along its length. In addition to braking, the distribution of payload can affect the wagon dynamics and therefore certain combinations need to be avoided. Based on the derailment risks calculated at infrastructure bottlenecks, critical train configurations and braking scenarios were identified and tested on track. It consisted of:
+                <ul class="disc">
+                    <li>empty wagons placed between loaded wagons</li>
+                    <li>Flat wagons with low torsional flexibility placed in between rigid and shorter coal wagons</li>
+                    <li>Testing the emergency braking protocol when radio communication between locomotives fail</li>
+                </ul>
+                The test with mixed train configuration with three locomotives (two remotely controlled) was carried out in 2021 in Germany to demonstrate the feasibility to operate radio-controlled long freight trains.  
+
+                <blockquote class="quote">
+                    <p><span><i class="ri-double-quotes-l"></i></span> critical train configurations and braking scenarios were identified and tested on track<span><i class="ri-double-quotes-r"></i></span></p>
+                </blockquote> 
+
+                <p>More detailed description of the project, methodologies, and tools used can be found in the references below.</p>
+                <!-- Videos -->
+                <h4>Distributed Power System demonstrator with mixed train configuration</h4>
+                <iframe width="device-width" height="500" src="https://www.youtube.com/embed/mkSjDUTNVUw?si=P5ip2Tyrw9fEy4bi"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <h1>References</h1>
+
+                <ol>
+                    <li>Press release: <a  class="one" href="https://www.dbcargo.com/rail-de-en/logistics-news/dps-distributed-power-system-the-way-to-the-long-train-6224036"> DPS: Distributed Power System, the way to the long train</a>, DB Cargo.</li>
+                    <li>  Project report: <a  class="one" href="https://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Akth%3Adiva-261377" >Deliverable 3.2: Safety precautions in train configuration and brake application.</a></li>
+                    <li>  Journal article: <a  class="one" href="https://doi.org/10.1177/0954409719841794" >Tolerable longitudinal forces for freight trains in tight S-curves using three-dimensional multi-body simulations.</a> </li>
+                    <li>  Journal article: <a  class="one" href="https://doi.org/10.1177/0954409720905203" >An integrated numerical framework to investigate the running safety of overlong freight trains.</a> </li>
+                    <li>Website: <a  class="one" href="http://www.dynafreight-rail.eu/" >DYNAFREIGHT</a></li>
+
+                </ol>
+       
+                <hr class="style2">
+                <p style="text-align:center; font-size: 30px;"> &#69687; </p>
+
+                <!--<p style="text-align:center; font-size: 30px;"> &#69685; </p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG EDIT ENDS HERE -->
+
+    <!-- Footer -->
+      <footer class="footer section">
+
+          <div class="footer-container container d-grid">
+
+              <div class="company-data" id="contact-section">
+                  <h2> Contact: </h2>
+                  <p class="company-description">Feel free to reach out to me via the handles listed below.</p>
+                  <ul class="list social-media">
+                      <li class="list-item">
+                          <a href="https://www.linkedin.com/in/visakhvkrishna" class="list-link"><i class="ri-linkedin-fill"></i></a>
+                      </li>
+                      <li class="list-item">
+                          <a href="https://twitter.com/visakh_vkrishna" class="list-link"><i class="ri-twitter-line"></i></a>
+                      </li>
+                      <li class="list-item">
+                          <a href="https://medium.com/@visakhkrishna" class="list-link"><i class="ri-medium-line"></i></a>
+                      </li>
+                      <li class="list-item">
+                        <a href=mailto:"vkrishna.visakh@gmail.com" class="list-link"><i class="ri-mail-line"></i></a>
+                      </li>
+                  </ul>
+                  <span class="copyright-notice">&copy;2023 Visakh Krishna. All rights reserved.</span>
+              </div>
+
+              <div>
+
+              </div>
+
+              <div>
+
+              </div>
+          </div>
+      </footer>
+
+      <!-- Swiper.js -->
+      <script src="../assets/js/swiper-bundle.min.js"></script>
+      <!-- Custom script -->
+      <script src="../assets/js/main.js"></script>
+  </body>
+  </html>
